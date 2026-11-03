@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_sales" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg_sales)" />
+
+  <!-- Window Header -->
+  <rect x="40" y="30" width="720" height="40" rx="8" fill="#1e293b" />
+  <circle cx="65" cy="50" r="6" fill="#ef4444" />
+  <circle cx="85" cy="50" r="6" fill="#eab308" />
+  <circle cx="105" cy="50" r="6" fill="#10b981" />
+  <text x="400" y="55" fill="#c7d2fe" font-family="'Segoe UI', sans-serif" font-size="14" text-anchor="middle">Sales &amp; Revenue Analytics Engine — Python, Pandas, Seaborn &amp; Plotly</text>
+
+  <!-- Main Canvas -->
+  <rect x="40" y="70" width="720" height="390" fill="#0b0f19" stroke="#312e81" stroke-width="1" />
+
+  <!-- Top Metric Cards -->
+  <g transform="translate(60, 90)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="155" height="70" rx="8" fill="#1e1e38" stroke="#4338ca" />
+    <text x="15" y="24" fill="#a5b4fc" font-family="sans-serif" font-size="11">Gross Revenue</text>
+    <text x="15" y="52" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold">$482,950</text>
+    <text x="110" y="50" fill="#10b981" font-family="sans-serif" font-size="11">↑ 24%</text>
+
+    <!-- Card 2 -->
+    <rect x="170" y="0" width="155" height="70" rx="8" fill="#1e1e38" stroke="#4338ca" />
+    <text x="185" y="24" fill="#a5b4fc" font-family="sans-serif" font-size="11">Avg Order Value</text>
+    <text x="185" y="52" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold">$138.40</text>
+    <text x="270" y="50" fill="#38bdf8" font-family="sans-serif" font-size="11">↑ 8%</text>
+
+    <!-- Card 3 -->
+    <rect x="340" y="0" width="160" height="70" rx="8" fill="#1e1e38" stroke="#4338ca" />
+    <text x="355" y="24" fill="#a5b4fc" font-family="sans-serif" font-size="11">Units Shipped</text>
+    <text x="355" y="52" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold">12,480</text>
+    <text x="445" y="50" fill="#10b981" font-family="sans-serif" font-size="11">MoM</text>
+
+    <!-- Card 4 -->
+    <rect x="515" y="0" width="165" height="70" rx="8" fill="#1e1e38" stroke="#4338ca" />
+    <text x="530" y="24" fill="#a5b4fc" font-family="sans-serif" font-size="11">Customer Retention</text>
+    <text x="530" y="52" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold">78.5%</text>
+    <text x="625" y="50" fill="#38bdf8" font-family="sans-serif" font-size="11">Cohort</text>
+  </g>
+
+  <!-- Left: Revenue Trend Chart -->
+  <rect x="60" y="175" width="410" height="170" rx="8" fill="#15172b" stroke="#3730a3" />
+  <text x="80" y="202" fill="#e0e7ff" font-family="sans-serif" font-size="13" font-weight="bold">Monthly Sales Velocity &amp; Forecast Curve</text>
+  
+  <!-- Area fill -->
+  <path d="M 80 310 L 80 270 Q 140 280, 180 250 T 260 220 T 340 180 T 420 160 L 450 145 L 450 310 Z" fill="url(#areaGrad)" />
+  <!-- Line curve -->
+  <path d="M 80 270 Q 140 280, 180 250 T 260 220 T 340 180 T 420 160 L 450 145" fill="none" stroke="#818cf8" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Data points -->
+  <circle cx="180" cy="250" r="4" fill="#38bdf8" />
+  <circle cx="260" cy="220" r="4" fill="#38bdf8" />
+  <circle cx="340" cy="180" r="4" fill="#38bdf8" />
+  <circle cx="420" cy="160" r="5" fill="#10b981" />
+
+  <!-- Right: Category Share Donut / Bar -->
+  <rect x="490" y="175" width="250" height="170" rx="8" fill="#15172b" stroke="#3730a3" />
+  <text x="505" y="202" fill="#e0e7ff" font-family="sans-serif" font-size="13" font-weight="bold">Category Contribution</text>
+  
+  <g transform="translate(505, 220)">
+    <!-- Cat 1 -->
+    <text x="0" y="12" fill="#cbd5e1" font-family="sans-serif" font-size="11">Electronics (42%)</text>
+    <rect x="0" y="18" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="0" y="18" width="92" height="8" rx="4" fill="#6366f1" />
+
+    <!-- Cat 2 -->
+    <text x="0" y="44" fill="#cbd5e1" font-family="sans-serif" font-size="11">Apparel (28%)</text>
+    <rect x="0" y="50" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="0" y="50" width="62" height="8" rx="4" fill="#38bdf8" />
+
+    <!-- Cat 3 -->
+    <text x="0" y="76" fill="#cbd5e1" font-family="sans-serif" font-size="11">Home Appliances (18%)</text>
+    <rect x="0" y="82" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="0" y="82" width="40" height="8" rx="4" fill="#10b981" />
+
+    <!-- Cat 4 -->
+    <text x="0" y="108" fill="#cbd5e1" font-family="sans-serif" font-size="11">Accessories (12%)</text>
+    <rect x="0" y="114" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="0" y="114" width="26" height="8" rx="4" fill="#f59e0b" />
+  </g>
+
+  <!-- Bottom Analytics Highlights -->
+  <rect x="60" y="360" width="680" height="80" rx="8" fill="#15172b" stroke="#3730a3" />
+  <text x="80" y="385" fill="#a5b4fc" font-family="monospace" font-size="12">Exploratory Data Analysis &amp; Statistical Modeling</text>
+  <text x="80" y="410" fill="#94a3b8" font-family="sans-serif" font-size="11">Pandas DataFrames • Correlation Heatmaps • Outlier Detection (Z-Score &amp; IQR) • Automated Executive PDF Reports</text>
+</svg>

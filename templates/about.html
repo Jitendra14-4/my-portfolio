@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me — Jitendra Jena | Python Developer & AI Enthusiast{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5" style="background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border-bottom: 1px solid var(--border-color);">
+  <div class="container text-center py-4">
+    <span class="section-tag">Biography</span>
+    <h1 class="display-5 fw-bold mb-3">About <span class="text-gradient">Jitendra Jena</span></h1>
+    <p class="text-muted-custom mx-auto" style="max-width: 650px;">
+      Discover my background, education, technical evolution, and vision in Python development, Data Science, and Machine Learning.
+    </p>
+  </div>
+</section>
+
+<!-- Profile Summary Section -->
+<section class="section-padding">
+  <div class="container">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Large Profile Image on the Left/Center -->
+      <div class="col-lg-5 text-center">
+        <div class="profile-img-container">
+          <div class="profile-img-wrapper" style="border-radius: 24px;">
+            <img src="{% static 'images/profile-avatar.svg' %}" alt="Jitendra Jena Profile Picture" class="img-fluid">
+          </div>
+          <div class="mt-4 d-flex justify-content-center gap-3">
+            <a href="{% static 'docs/Jitendra_Jena_Resume.pdf' %}" download class="btn-primary-custom w-100 justify-content-center py-3">
+              <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Full Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Summary on Right -->
+      <div class="col-lg-7">
+        <span class="section-tag">Professional Summary</span>
+        <h2 class="h2 fw-bold mb-3">Building Scalable Code &amp; Intelligent Data Solutions</h2>
+        <p class="text-muted-custom">
+          Hello! I'm <strong>Jitendra Jena</strong>, a software engineer with deep focus on <strong>Python backend systems</strong> and modern <strong>AI &amp; Data Science pipelines</strong>. I have a passion for creating end-to-end applications that bridge intuitive user experiences with high-performance server architectures and predictive machine learning models.
+        </p>
+        <p class="text-muted-custom">
+          My experience spans developing full-stack web applications using <strong>Django and Flask</strong>, architecting relational databases in <strong>MySQL and SQLite</strong>, performing exploratory data analysis using <strong>Pandas and NumPy</strong>, and extracting actionable trends using <strong>Matplotlib and Seaborn</strong>.
+        </p>
+        <p class="text-muted-custom">
+          Whether designing a multi-user clinical database, an automated crop moisture detection framework, or analytical revenue dashboards, I prioritize writing clean, maintainable, and well-tested code.
+        </p>
+
+        <!-- Quick Facts Matrix -->
+        <div class="row g-3 mt-2">
+          <div class="col-sm-6">
+            <div class="p-3 rounded-3" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+              <div class="text-muted-custom small">Specialization</div>
+              <div class="fw-bold text-light">Python Backend &amp; Data Science</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 rounded-3" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+              <div class="text-muted-custom small">Primary Stack</div>
+              <div class="fw-bold text-light">Django, Flask, SQL, Scikit-Learn</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 rounded-3" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+              <div class="text-muted-custom small">Location</div>
+              <div class="fw-bold text-light">India (Available for Remote Worldwide)</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="p-3 rounded-3" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+              <div class="text-muted-custom small">Availability</div>
+              <div class="fw-bold text-success">Open for Developer Roles &amp; Internships</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education and Qualifications & Work Experience Tabs / Row -->
+    <div class="row g-4 pt-4">
+      <!-- Education Column -->
+      <div class="col-lg-6">
+        <div class="p-4 rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <div class="p-3 rounded-3" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue);">
+              <i class="bi bi-mortarboard-fill fs-3"></i>
+            </div>
+            <div>
+              <h3 class="h4 fw-bold mb-0">Education &amp; Qualifications</h3>
+              <p class="text-muted-custom small mb-0">Academic background in Computer Science &amp; Technology</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="badge bg-primary bg-opacity-25 text-primary mb-2">2020 — 2024</span>
+            <h4 class="h5 fw-bold mb-1">Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering</h4>
+            <div class="text-muted-custom small mb-2">Technical University / Institute of Technology</div>
+            <p class="text-muted-custom small mb-0">
+              Graduated with First Class Distinction. Coursework encompassed Data Structures &amp; Algorithms, Object-Oriented Programming (Python/Java), Database Management Systems (SQL), Operating Systems, and Software Engineering methodologies.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="badge bg-success bg-opacity-25 text-success mb-2">Certifications &amp; Training</span>
+            <h4 class="h5 fw-bold mb-1">Python for Data Science &amp; Machine Learning Bootcamp</h4>
+            <div class="text-muted-custom small mb-2">Online Professional Specialization</div>
+            <p class="text-muted-custom small mb-0">
+              Intensive training covering Python programming, Pandas data manipulation, NumPy array computing, statistical modeling, Exploratory Data Analysis, and Scikit-Learn supervised/unsupervised algorithms.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="badge bg-info bg-opacity-25 text-info mb-2">Specialization</span>
+            <h4 class="h5 fw-bold mb-1">Full-Stack Django &amp; REST Framework Certification</h4>
+            <div class="text-muted-custom small mb-2">Developer Certification Track</div>
+            <p class="text-muted-custom small mb-0">
+              Comprehensive certification in building secure, MVC/MVT architectures, handling migrations, ORM query optimization, CSRF security, authentication, and RESTful API endpoints.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience & Internships Column -->
+      <div class="col-lg-6">
+        <div class="p-4 rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <div class="p-3 rounded-3" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-green);">
+              <i class="bi bi-briefcase-fill fs-3"></i>
+            </div>
+            <div>
+              <h3 class="h4 fw-bold mb-0">Work &amp; Internship Experience</h3>
+              <p class="text-muted-custom small mb-0">Practical industry exposure &amp; software delivery</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="badge bg-success bg-opacity-25 text-success mb-2">2024 — Present</span>
+            <h4 class="h5 fw-bold mb-1">Python &amp; Web Developer Trainee</h4>
+            <div class="text-muted-custom small mb-2">Tech Solutions Lab • Full-Time Trainee</div>
+            <p class="text-muted-custom small mb-0">
+              Developed and maintained Django-backed enterprise modules, optimized complex SQL queries for relational databases, integrated third-party REST APIs, and authored comprehensive unit tests for server endpoints.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="badge bg-primary bg-opacity-25 text-primary mb-2">2023 — 2024</span>
+            <h4 class="h5 fw-bold mb-1">AI &amp; Data Science Project Intern</h4>
+            <div class="text-muted-custom small mb-2">AgriTech Analytics &amp; IoT Initiative</div>
+            <p class="text-muted-custom small mb-0">
+              Collaborated on the Paddy Moisture Detection System. Built data preprocessing pipelines using Pandas, cleaned raw capacitive sensor readings, tuned Random Forest Regression models, and deployed prediction endpoints for edge devices.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="badge bg-warning bg-opacity-25 text-warning mb-2">Academic &amp; Freelance</span>
+            <h4 class="h5 fw-bold mb-1">Full-Stack Python Projects Lead</h4>
+            <div class="text-muted-custom small mb-2">Independent Engineering Portfolio</div>
+            <p class="text-muted-custom small mb-0">
+              Engineered end-to-end applications including Student Management System and Hospital Management System with role-based authentication, PDF report generation, and interactive Bootstrap 5 interfaces.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI & Data Science Learning Journey Section -->
+    <div class="mt-5 pt-4">
+      <div class="section-header">
+        <span class="section-tag">Growth Path</span>
+        <h2 class="section-title">My AI &amp; Data Science Learning Journey</h2>
+        <p class="section-subtitle">
+          How I transitioned from fundamentals of algorithmic programming into statistical data engineering and predictive machine learning.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Milestone 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="p-4 rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="fw-bold fs-4 text-gradient">Phase 01</span>
+              <i class="fa-brands fa-python fs-2 text-primary"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Python Foundations</h3>
+            <p class="text-muted-custom small mb-0">
+              Mastered Object-Oriented Programming, functional paradigms, data structures (lists, tuples, dicts, sets), file I/O, error handling, and clean PEP-8 coding conventions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="p-4 rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="fw-bold fs-4 text-gradient">Phase 02</span>
+              <i class="bi bi-bar-chart-fill fs-2 text-info"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Data Wrangling &amp; EDA</h3>
+            <p class="text-muted-custom small mb-0">
+              Gained proficiency with NumPy arrays, Pandas DataFrames, handling missing values, outlier detection, statistical distributions, and visualization using Matplotlib &amp; Seaborn.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="p-4 rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="fw-bold fs-4 text-gradient">Phase 03</span>
+              <i class="bi bi-robot fs-2 text-success"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Machine Learning</h3>
+            <p class="text-muted-custom small mb-0">
+              Implemented supervised algorithms (Linear/Logistic Regression, Decision Trees, Random Forests, SVM) and clustering techniques using Scikit-Learn with model evaluation metrics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="p-4 rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--border-color);">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="fw-bold fs-4 text-gradient">Phase 04</span>
+              <i class="bi bi-cloud-check-fill fs-2 text-warning"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Deployment &amp; Web AI</h3>
+            <p class="text-muted-custom small mb-0">
+              Connected trained models to production web applications using Django &amp; Flask, processing real-time sensor streams and user inputs into actionable automated outputs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career Goals & Vision Section -->
+    <div class="mt-5 pt-3">
+      <div class="p-4 p-md-5 rounded-4" style="background: var(--bg-secondary); border: 1px solid var(--border-color);">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <span class="section-tag">Future Vision</span>
+            <h3 class="h3 fw-bold mb-3">Projects &amp; Career Aspirations</h3>
+            <p class="text-muted-custom mb-3">
+              My goal is to contribute as a high-impact <strong>Python Developer / Data Science Engineer</strong> in an innovative tech environment. I aspire to build reliable distributed backend services, enhance operational intelligence through machine learning models, and continually deepen my expertise in Deep Learning, NLP, and cloud architectures (AWS/GCP).
+            </p>
+            <p class="text-muted-custom mb-0">
+              I am eager to collaborate with cross-functional engineering teams, tackle real-world customer problems, and build software that scales reliably.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <a href="{% static 'docs/Jitendra_Jena_Resume.pdf' %}" download class="btn-primary-custom py-3 px-4 mb-3 w-100 justify-content-center">
+              <i class="bi bi-download"></i> Download Resume (PDF)
+            </a>
+            <a href="{% url 'contact' %}" class="btn-outline-custom py-3 px-4 w-100 justify-content-center">
+              <i class="bi bi-chat-text-fill"></i> Discuss Opportunities
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

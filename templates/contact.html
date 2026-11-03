@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Jitendra Jena — Python Developer & AI Enthusiast{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5" style="background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border-bottom: 1px solid var(--border-color);">
+  <div class="container text-center py-4">
+    <span class="section-tag">Let's Connect</span>
+    <h1 class="display-5 fw-bold mb-3">Get in <span class="text-gradient">Touch</span></h1>
+    <p class="text-muted-custom mx-auto" style="max-width: 650px;">
+      Have a question, a project opportunity, or want to discuss Python development and Data Science? Fill out the form below or reach out via direct channels.
+    </p>
+  </div>
+</section>
+
+<!-- Contact Form & Info Section -->
+<section class="section-padding">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Left Column: Contact Information Cards -->
+      <div class="col-lg-5">
+        <div class="mb-4">
+          <span class="section-tag">Contact Information</span>
+          <h2 class="h3 fw-bold mb-3">Reach Out Directly</h2>
+          <p class="text-muted-custom">
+            I am always eager to discuss software engineering roles, data science collaborations, open-source projects, and technical innovations.
+          </p>
+        </div>
+
+        <div class="d-flex flex-column gap-3 mb-4">
+          <!-- Card: Email -->
+          <div class="p-4 rounded-4" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-3 rounded-3" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue);">
+                <i class="bi bi-envelope-at-fill fs-4"></i>
+              </div>
+              <div>
+                <div class="small text-muted-custom">Email Address</div>
+                <a href="mailto:jitendra.jena@example.com" class="fw-bold text-decoration-none text-light fs-6">
+                  jitendra.jena@example.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: LinkedIn -->
+          <div class="p-4 rounded-4" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-3 rounded-3" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                <i class="bi bi-linkedin fs-4"></i>
+              </div>
+              <div>
+                <div class="small text-muted-custom">LinkedIn Profile</div>
+                <a href="https://linkedin.com/in/jitendra-jena" target="_blank" rel="noopener noreferrer" class="fw-bold text-decoration-none text-light fs-6">
+                  linkedin.com/in/jitendra-jena
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: GitHub -->
+          <div class="p-4 rounded-4" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-3 rounded-3" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-indigo);">
+                <i class="bi bi-github fs-4"></i>
+              </div>
+              <div>
+                <div class="small text-muted-custom">GitHub Repositories</div>
+                <a href="https://github.com/jitendrajena" target="_blank" rel="noopener noreferrer" class="fw-bold text-decoration-none text-light fs-6">
+                  github.com/jitendrajena
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Location & Status -->
+          <div class="p-4 rounded-4" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-3 rounded-3" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-green);">
+                <i class="bi bi-geo-alt-fill fs-4"></i>
+              </div>
+              <div>
+                <div class="small text-muted-custom">Current Location &amp; Status</div>
+                <div class="fw-bold text-light fs-6">
+                  India • Open to Remote &amp; On-Site Worldwide
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Hours & Response Time -->
+        <div class="p-4 rounded-4" style="background: var(--bg-secondary); border: 1px dashed var(--border-color);">
+          <div class="d-flex align-items-center gap-2 mb-1">
+            <span class="brand-dot"></span>
+            <span class="fw-bold small text-light">Fast Response Guarantee</span>
+          </div>
+          <p class="small text-muted-custom mb-0">
+            Messages sent through this form are logged securely to the Django database. I typically respond within 12 to 24 hours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column: Django Validated Contact Form -->
+      <div class="col-lg-7">
+        <div class="p-4 p-md-5 rounded-4" style="background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <h3 class="h4 fw-bold mb-0">Send a Direct Message</h3>
+            <span class="badge bg-primary bg-opacity-25 text-primary">Backend Validated</span>
+          </div>
+
+          <form action="{% url 'contact' %}" method="POST" novalidate id="contactForm">
+            {% csrf_token %}
+
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="contactName" class="form-label">
+                Full Name <span class="text-danger">*</span>
+              </label>
+              {{ form.name }}
+              {% if form.name.errors %}
+              <div class="text-danger small mt-1">
+                {% for err in form.name.errors %}{{ err }}{% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Email Address -->
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">
+                Email Address <span class="text-danger">*</span>
+              </label>
+              {{ form.email }}
+              {% if form.email.errors %}
+              <div class="text-danger small mt-1">
+                {% for err in form.email.errors %}{{ err }}{% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Subject -->
+            <div class="mb-3">
+              <label for="contactSubject" class="form-label">
+                Subject <span class="text-danger">*</span>
+              </label>
+              {{ form.subject }}
+              {% if form.subject.errors %}
+              <div class="text-danger small mt-1">
+                {% for err in form.subject.errors %}{{ err }}{% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Message -->
+            <div class="mb-4">
+              <label for="contactMessage" class="form-label">
+                Message Content <span class="text-danger">*</span>
+              </label>
+              {{ form.message }}
+              <div class="text-muted-custom small mt-1">
+                Please provide sufficient detail (minimum 10 characters).
+              </div>
+              {% if form.message.errors %}
+              <div class="text-danger small mt-1">
+                {% for err in form.message.errors %}{{ err }}{% endfor %}
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-primary-custom w-100 justify-content-center py-3 fs-6">
+              <i class="bi bi-send-fill"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_job" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1128" />
+      <stop offset="50%" stop-color="#101c3d" />
+      <stop offset="100%" stop-color="#070a1a" />
+    </linearGradient>
+    <linearGradient id="glowBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="cyanBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="jobGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="url(#bg_job)" />
+
+  <!-- Window Header Bar -->
+  <rect x="40" y="24" width="720" height="38" rx="8" fill="#1e293b" />
+  <circle cx="65" cy="43" r="6" fill="#ef4444" />
+  <circle cx="85" cy="43" r="6" fill="#f59e0b" />
+  <circle cx="105" cy="43" r="6" fill="#10b981" />
+  <text x="400" y="48" fill="#94a3b8" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">AI-Based Intelligent Job Finder &amp; Match Engine — NLP &amp; Python Flask</text>
+
+  <!-- Left Sidebar / Search Filters -->
+  <rect x="50" y="80" width="210" height="370" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+  
+  <text x="70" y="115" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="13">🔍 RESUME MATCHER</text>
+  
+  <!-- Candidate Match Score -->
+  <g transform="translate(65, 130)">
+    <rect x="0" y="0" width="180" height="75" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1" />
+    <text x="15" y="25" fill="#94a3b8" font-family="sans-serif" font-size="11">Profile Compatibility</text>
+    <text x="15" y="58" fill="#10b981" font-family="sans-serif" font-size="28" font-weight="bold">98.5%</text>
+    <text x="105" y="55" fill="#38bdf8" font-family="sans-serif" font-size="11">High Match ★</text>
+  </g>
+
+  <!-- Extracted Skills in Candidate Profile -->
+  <g transform="translate(65, 225)" font-family="sans-serif">
+    <text x="0" y="10" fill="#94a3b8" font-size="11" font-weight="bold">MATCHED KEYWORDS</text>
+    <rect x="0" y="25" width="85" height="24" rx="12" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1" />
+    <text x="12" y="41" fill="#38bdf8" font-size="10">Python</text>
+
+    <rect x="95" y="25" width="85" height="24" rx="12" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" />
+    <text x="107" y="41" fill="#10b981" font-size="10">Django/Flask</text>
+
+    <rect x="0" y="58" width="85" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1" />
+    <text x="12" y="74" fill="#a855f7" font-size="10">NLP / RAG</text>
+
+    <rect x="95" y="58" width="85" height="24" rx="12" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1" />
+    <text x="107" y="74" fill="#06b6d4" font-size="10">REST APIs</text>
+
+    <rect x="0" y="91" width="85" height="24" rx="12" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1" />
+    <text x="12" y="107" fill="#fbbf24" font-size="10">SQL / MySQL</text>
+
+    <rect x="95" y="91" width="85" height="24" rx="12" fill="#ec4899" fill-opacity="0.15" stroke="#ec4899" stroke-width="1" />
+    <text x="107" y="107" fill="#f472b6" font-size="10">Pandas / ML</text>
+  </g>
+
+  <!-- Right Main Area: Recommended Job Openings List -->
+  <rect x="280" y="80" width="470" height="370" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+  
+  <text x="305" y="115" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="15">🎯 AI-Curated Career Matches (Real-Time Scraped)</text>
+
+  <!-- Job Card 1 -->
+  <g transform="translate(305, 135)">
+    <rect x="0" y="0" width="420" height="90" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+    <circle cx="35" cy="35" r="18" fill="#0284c7" fill-opacity="0.2" />
+    <text x="35" y="41" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">PY</text>
+    
+    <text x="65" y="32" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">Senior Python Backend Engineer</text>
+    <text x="65" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">CloudScale Tech • Remote • Full-Time</text>
+    <text x="65" y="72" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="600">₹12 - 18 LPA • 99% Semantic Match Score</text>
+    
+    <rect x="330" y="25" width="75" height="30" rx="6" fill="#0284c7" />
+    <text x="367" y="44" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Apply Now</text>
+  </g>
+
+  <!-- Job Card 2 -->
+  <g transform="translate(305, 238)">
+    <rect x="0" y="0" width="420" height="90" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="35" cy="35" r="18" fill="#10b981" fill-opacity="0.2" />
+    <text x="35" y="41" fill="#10b981" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">AI</text>
+    
+    <text x="65" y="32" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">Machine Learning &amp; Data Analyst</text>
+    <text x="65" y="50" fill="#94a3b8" font-family="sans-serif" font-size="11">DataVibe Analytics • Hybrid / Bengaluru</text>
+    <text x="65" y="72" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="600">₹10 - 15 LPA • 96% Semantic Match Score</text>
+    
+    <rect x="330" y="25" width="75" height="30" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="367" y="44" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Apply Now</text>
+  </g>
+
+  <!-- Bottom Analytics Bar -->
+  <g transform="translate(305, 345)" font-family="sans-serif" font-size="11">
+    <rect x="0" y="0" width="420" height="85" rx="8" fill="#131d35" stroke="#1e293b" />
+    <text x="20" y="30" fill="#38bdf8" font-weight="bold">⚡ NLP Pipeline:</text>
+    <text x="130" y="30" fill="#94a3b8">Cosine Similarity + BERT Embeddings + Web Scraping</text>
+    
+    <text x="20" y="58" fill="#10b981" font-weight="bold">✓ Status:</text>
+    <text x="80" y="58" fill="#94a3b8">Processed 1,240 portal listings • 0.12s latency</text>
+  </g>
+</svg>

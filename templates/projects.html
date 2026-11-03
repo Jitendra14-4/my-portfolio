@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects & Gallery — Jitendra Jena | Python & Data Science Portfolio{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5" style="background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border-bottom: 1px solid var(--border-color);">
+  <div class="container text-center py-4">
+    <span class="section-tag">Portfolio Showcase</span>
+    <h1 class="display-5 fw-bold mb-3">Projects &amp; <span class="text-gradient">Technical Gallery</span></h1>
+    <p class="text-muted-custom mx-auto" style="max-width: 650px;">
+      Explore real-world software applications, IoT-integrated systems, and data analytics dashboards developed with Python, Django, and Machine Learning. Click any image for an expanded lightbox preview.
+    </p>
+
+    <!-- Search & Filter Controls -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6 col-lg-5">
+        <div class="input-group">
+          <span class="input-group-text border-end-0" style="background: var(--bg-card); border-color: var(--border-color); color: var(--text-secondary);">
+            <i class="bi bi-search"></i>
+          </span>
+          <input type="text" id="projectSearchInput" class="form-control border-start-0 shadow-none ps-0" placeholder="Search by title, technology (e.g. Django, ML, Pandas)..." aria-label="Search projects">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery & Filter Grid Section -->
+<section class="section-padding">
+  <div class="container">
+    <!-- Category Filter Buttons -->
+    <div class="filter-btn-group">
+      <button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+      <button type="button" class="filter-btn" data-filter="python">Python</button>
+      <button type="button" class="filter-btn" data-filter="django">Django</button>
+      <button type="button" class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+      <button type="button" class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row g-4" id="projectsGrid">
+      {% for proj in projects %}
+      <div class="col-lg-6 col-xl-6 project-grid-item" 
+           data-category="{{ proj.category }}"
+           data-title="{{ proj.title }}"
+           data-tech="{{ proj.technologies }}">
+        <div class="portfolio-card">
+          <!-- Image Container with Lightbox Trigger -->
+          <div class="project-card-image">
+            <img src="{% if proj.image %}{{ proj.image.url }}{% else %}{% static proj.image_static %}{% endif %}" alt="{{ proj.title }}">
+            <div class="project-card-overlay">
+              <button type="button" class="overlay-btn open-lightbox-trigger"
+                      data-img="{% if proj.image %}{{ proj.image.url }}{% else %}{% static proj.image_static %}{% endif %}"
+                      data-title="{{ proj.title }}"
+                      data-desc="{{ proj.description|default:proj.short_description }}"
+                      data-tech="{{ proj.technologies }}"
+                      data-github="{{ proj.github_url }}"
+                      data-demo="{{ proj.demo_url }}"
+                      title="Click to view full preview in Lightbox"
+                      aria-label="Enlarge image">
+                <i class="bi bi-arrows-fullscreen"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="project-badge text-uppercase">{{ proj.category }}</span>
+              <span class="small text-muted-custom">
+                <i class="bi bi-calendar3 me-1"></i> {{ proj.created_at|date:"M Y"|default:"2024" }}
+              </span>
+            </div>
+
+            <h3 class="h4 fw-bold mb-2">{{ proj.title }}</h3>
+            <p class="text-muted-custom small mb-3 flex-grow-1">
+              {{ proj.short_description }}
+            </p>
+
+            <!-- Technology Tags -->
+            <div class="mb-4">
+              {% for tech in proj.tech_list %}
+              <span class="tech-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+
+            <!-- Card Footer Links -->
+            <div class="d-flex justify-content-between align-items-center pt-3 border-top" style="border-color: var(--border-color) !important;">
+              <button type="button" class="btn-outline-custom py-2 px-3 fs-6 open-lightbox-trigger"
+                      data-img="{% if proj.image %}{{ proj.image.url }}{% else %}{% static proj.image_static %}{% endif %}"
+                      data-title="{{ proj.title }}"
+                      data-desc="{{ proj.description|default:proj.short_description }}"
+                      data-tech="{{ proj.technologies }}"
+                      data-github="{{ proj.github_url }}"
+                      data-demo="{{ proj.demo_url }}">
+                <i class="bi bi-info-circle me-1"></i> View Details
+              </button>
+
+              <div class="d-flex gap-2">
+                {% if proj.github_url and proj.github_url != '#' %}
+                <a href="{{ proj.github_url }}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="width: 38px; height: 38px;" title="Source Code on GitHub" aria-label="GitHub Code">
+                  <i class="bi bi-github"></i>
+                </a>
+                {% endif %}
+                {% if proj.demo_url and proj.demo_url != '#' %}
+                <a href="{{ proj.demo_url }}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="width: 38px; height: 38px;" title="Live Interactive Demo" aria-label="Live Demo">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- No Results Found Fallback Message -->
+    <div id="noProjectsFound" class="text-center py-5" style="display: none;">
+      <div class="p-4 rounded-4 mx-auto" style="max-width: 480px; background: var(--bg-card); border: 1px solid var(--border-color);">
+        <i class="bi bi-search fs-1 text-muted-custom mb-3 d-block"></i>
+        <h4 class="fw-bold mb-2">No Matching Projects Found</h4>
+        <p class="text-muted-custom small mb-0">Try searching for other keywords like "Django", "Python", "ML", or clear your filter.</p>
+      </div>
+    </div>
+
+    <!-- Admin / Upload Guide Callout -->
+    <div class="mt-5 p-4 rounded-4" style="background: var(--bg-card); border: 1px dashed var(--accent-blue);">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          <h4 class="h5 fw-bold mb-1 text-gradient-alt">
+            <i class="bi bi-gear-fill me-2"></i> Managing Projects &amp; Adding New Images
+          </h4>
+          <p class="text-muted-custom small mb-0">
+            You can easily upload new project screenshots, edit project descriptions, and update links directly using the Django Admin Panel.
+          </p>
+        </div>
+        <a href="/admin/" target="_blank" class="btn-outline-custom text-nowrap py-2 px-3">
+          <i class="bi bi-shield-lock-fill"></i> Access Django Admin
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,426 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Jitendra Jena — Python Developer | AI & Data Science Enthusiast{% endblock %}
+
+{% block content %}
+<!-- ==========================================================================
+     HERO SECTION
+     ========================================================================== -->
+<section class="hero-section">
+  <!-- Glowing Ambient Accents -->
+  <div class="hero-glow-bg"></div>
+  <div class="hero-glow-bg-left"></div>
+
+  <div class="container position-relative" style="z-index: 1;">
+    <div class="row align-items-center g-5">
+      <!-- Left Hero Text & Intro -->
+      <div class="col-lg-7 text-center text-lg-start">
+        <div class="hero-tag">
+          <span class="brand-dot"></span> Available for Developer & AI/DS Roles
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Jitendra Jena</span>.
+        </h1>
+        
+        <div class="hero-subtitle">
+          <span id="typewriterText">Python Developer</span><span class="cursor-blink">|</span>
+        </div>
+        
+        <p class="hero-description">
+          I design and engineer clean, scalable web applications using <strong>Python, Django, and Flask</strong>, paired with robust data-driven solutions using <strong>NumPy, Pandas, Seaborn, and Machine Learning</strong>. Passionate about solving complex operational challenges with modern software architecture and analytical insights.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
+          <a href="{% url 'projects' %}" class="btn-primary-custom">
+            <i class="bi bi-grid-fill"></i> View My Projects
+          </a>
+          <a href="{% url 'contact' %}" class="btn-outline-custom">
+            <i class="bi bi-chat-dots-fill"></i> Contact Me
+          </a>
+          <a href="{% static 'docs/Jitendra_Jena_Resume.pdf' %}" download class="btn-outline-custom" title="Download Jitendra's Resume">
+            <i class="bi bi-file-earmark-arrow-down-fill text-success"></i> Resume
+          </a>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 pt-2">
+          <span class="small text-muted-custom fw-semibold">Connect with me:</span>
+          <a href="https://github.com/jitendrajena" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/jitendra-jena" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:jitendra.jena@example.com" class="social-icon-btn" aria-label="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Hero Profile Artwork -->
+      <div class="col-lg-5">
+        <div class="profile-img-container">
+          <!-- Floating Pill 1: Python Dev -->
+          <div class="floating-pill floating-pill-1">
+            <div class="p-2 rounded-3" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue);">
+              <i class="bi bi-code-slash fs-4"></i>
+            </div>
+            <div>
+              <div class="fw-bold small text-light">Python &amp; Django</div>
+              <div class="text-muted-custom" style="font-size: 0.72rem;">Backend Systems</div>
+            </div>
+          </div>
+
+          <!-- Main Profile Image Container -->
+          <div class="profile-img-wrapper">
+            <img src="{% static 'images/profile-avatar.svg' %}" alt="Jitendra Jena — Python Developer & AI Enthusiast" class="img-fluid">
+          </div>
+
+          <!-- Floating Pill 2: AI & Data Science -->
+          <div class="floating-pill floating-pill-2">
+            <div class="p-2 rounded-3" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-green);">
+              <i class="bi bi-cpu-fill fs-4"></i>
+            </div>
+            <div>
+              <div class="fw-bold small text-light">AI &amp; Data Science</div>
+              <div class="text-muted-custom" style="font-size: 0.72rem;">ML Models &amp; Analytics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SKILLS SECTION
+     ========================================================================== -->
+<section class="section-padding" id="skillsSection" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Core Competencies</span>
+      <h2 class="section-title">Technical Skills &amp; Toolkit</h2>
+      <p class="section-subtitle">
+        A balanced foundation across backend engineering, full-stack web architectures, database management, and end-to-end data science workflows.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1. Python -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-primary">
+            <i class="fa-brands fa-python"></i>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-category">Core &amp; OOP, Scripting</p>
+        </div>
+      </div>
+
+      <!-- 2. Django -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-success">
+            <i class="bi bi-layers-fill"></i>
+          </div>
+          <h3 class="skill-name">Django</h3>
+          <p class="skill-category">MTV, ORM &amp; REST APIs</p>
+        </div>
+      </div>
+
+      <!-- 3. Flask -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-info">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <h3 class="skill-name">Flask</h3>
+          <p class="skill-category">Microservices &amp; APIs</p>
+        </div>
+      </div>
+
+      <!-- 4. HTML and CSS -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-danger">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h3 class="skill-name">HTML &amp; CSS</h3>
+          <p class="skill-category">Semantic &amp; Responsive UI</p>
+        </div>
+      </div>
+
+      <!-- 5. JavaScript -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-warning">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+          <p class="skill-category">DOM &amp; Async ES6+</p>
+        </div>
+      </div>
+
+      <!-- 6. SQL and MySQL -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-info">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="skill-name">SQL &amp; MySQL</h3>
+          <p class="skill-category">Queries, Joins, Schema</p>
+        </div>
+      </div>
+
+      <!-- 7. NumPy and Pandas -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-primary">
+            <i class="bi bi-table"></i>
+          </div>
+          <h3 class="skill-name">NumPy &amp; Pandas</h3>
+          <p class="skill-category">Data Wrangling &amp; Vectors</p>
+        </div>
+      </div>
+
+      <!-- 8. Matplotlib & Seaborn -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-warning">
+            <i class="bi bi-bar-chart-line-fill"></i>
+          </div>
+          <h3 class="skill-name">Matplotlib &amp; Seaborn</h3>
+          <p class="skill-category">EDA &amp; Visual Analytics</p>
+        </div>
+      </div>
+
+      <!-- 9. Machine Learning -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-success">
+            <i class="bi bi-robot"></i>
+          </div>
+          <h3 class="skill-name">Machine Learning</h3>
+          <p class="skill-category">Scikit-Learn, Regression, Trees</p>
+        </div>
+      </div>
+
+      <!-- 10. Data Analysis -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-info">
+            <i class="bi bi-pie-chart-fill"></i>
+          </div>
+          <h3 class="skill-name">Data Analysis</h3>
+          <p class="skill-category">Statistical Insights &amp; KPI</p>
+        </div>
+      </div>
+
+      <!-- 11. Git & GitHub (Bonus) -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-light">
+            <i class="fa-brands fa-git-alt text-danger"></i>
+          </div>
+          <h3 class="skill-name">Git &amp; GitHub</h3>
+          <p class="skill-category">Version Control &amp; Collab</p>
+        </div>
+      </div>
+
+      <!-- 12. Bootstrap 5 (Bonus) -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="skill-card">
+          <div class="skill-icon-wrapper text-primary">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
+          <h3 class="skill-name">Bootstrap 5</h3>
+          <p class="skill-category">Modern Grid &amp; Components</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FEATURED PROJECTS SECTION
+     ========================================================================== -->
+<section class="section-padding" id="featuredProjects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Showcase</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">
+        Explore highlighted solutions spanning web architectures, database design, machine learning models, and real-time data visualizers.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      {% for proj in featured_projects %}
+      <div class="col-lg-6">
+        <div class="portfolio-card">
+          <!-- Card Image Header -->
+          <div class="project-card-image">
+            <img src="{% if proj.image %}{{ proj.image.url }}{% else %}{% static proj.image_static %}{% endif %}" alt="{{ proj.title }}">
+            <!-- Overlay with Lightbox Trigger -->
+            <div class="project-card-overlay">
+              <button type="button" class="overlay-btn open-lightbox-trigger" 
+                      data-img="{% if proj.image %}{{ proj.image.url }}{% else %}{% static proj.image_static %}{% endif %}"
+                      data-title="{{ proj.title }}"
+                      data-desc="{{ proj.description|default:proj.short_description }}"
+                      data-tech="{{ proj.technologies }}"
+                      data-github="{{ proj.github_url }}"
+                      data-demo="{{ proj.demo_url }}"
+                      title="Enlarge Image &amp; Details"
+                      aria-label="Enlarge Image">
+                <i class="bi bi-arrows-fullscreen"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="project-badge text-uppercase">{{ proj.category }}</span>
+              <span class="small text-muted-custom">Featured</span>
+            </div>
+
+            <h3 class="h5 fw-bold mb-2">{{ proj.title }}</h3>
+            <p class="text-muted-custom small mb-3 flex-grow-1">
+              {{ proj.short_description }}
+            </p>
+
+            <!-- Tech Tags -->
+            <div class="mb-4">
+              {% for tech in proj.tech_list %}
+              <span class="tech-tag">{{ tech }}</span>
+              {% endfor %}
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top" style="border-color: var(--border-color) !important;">
+              <button type="button" class="btn btn-sm btn-outline-custom open-lightbox-trigger"
+                      data-img="{% if proj.image %}{{ proj.image.url }}{% else %}{% static proj.image_static %}{% endif %}"
+                      data-title="{{ proj.title }}"
+                      data-desc="{{ proj.description|default:proj.short_description }}"
+                      data-tech="{{ proj.technologies }}"
+                      data-github="{{ proj.github_url }}"
+                      data-demo="{{ proj.demo_url }}">
+                <i class="bi bi-info-circle me-1"></i> View Details
+              </button>
+
+              <div class="d-flex gap-2">
+                {% if proj.github_url and proj.github_url != '#' %}
+                <a href="{{ proj.github_url }}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="width: 36px; height: 36px; font-size: 1rem;" title="View GitHub Code" aria-label="GitHub Code">
+                  <i class="bi bi-github"></i>
+                </a>
+                {% endif %}
+                {% if proj.demo_url and proj.demo_url != '#' %}
+                <a href="{{ proj.demo_url }}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="width: 36px; height: 36px; font-size: 1rem;" title="Live Demo" aria-label="Live Demo">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- View All Link -->
+    <div class="text-center mt-5">
+      <a href="{% url 'projects' %}" class="btn-primary-custom px-4 py-3">
+        <span>Explore All Projects &amp; Gallery</span>
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     ABOUT PREVIEW SECTION
+     ========================================================================== -->
+<section class="section-padding" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center">
+        <div class="p-4 rounded-4" style="background: var(--bg-card); border: 1px solid var(--border-color); display: inline-block;">
+          <img src="{% static 'images/profile-avatar.svg' %}" alt="Jitendra Jena" class="img-fluid rounded-4" style="max-height: 320px;">
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Architecting Robust Code &amp; Data Insights</h2>
+        <p class="text-muted-custom mb-3">
+          I am a dedicated <strong>Python Developer</strong> and an avid learner in the realm of <strong>Artificial Intelligence &amp; Data Science</strong>. My technical journey is fueled by a curiosity for how algorithms transform raw datasets into actionable intelligence and how scalable backend frameworks keep web platforms running seamlessly.
+        </p>
+        <p class="text-muted-custom mb-4">
+          From architecting role-based systems like student portals and clinical record management systems to training regression models for agricultural IoT devices, I bring enthusiasm, systematic problem-solving, and clean coding practices to every project.
+        </p>
+
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span class="fw-semibold">Production-ready Django &amp; Flask</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span class="fw-semibold">Data Exploration with Pandas/NumPy</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span class="fw-semibold">Machine Learning Model Tuning</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span class="fw-semibold">SQL &amp; Relational Schema Design</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="{% url 'about' %}" class="btn-outline-custom">
+          <span>Read Full Story &amp; Experience</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CONTACT PREVIEW / CALL TO ACTION
+     ========================================================================== -->
+<section class="section-padding">
+  <div class="container">
+    <div class="p-5 rounded-4 text-center position-relative overflow-hidden" 
+         style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%), var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+      
+      <span class="section-tag mb-2">Let's Connect</span>
+      <h2 class="display-6 fw-bold mb-3">Have an Exciting Project or Opportunity?</h2>
+      <p class="text-muted-custom mx-auto mb-4" style="max-width: 620px;">
+        I am actively seeking roles where I can contribute my Python backend skills and Data Science passion. Whether you have a question, a potential collaboration, or want to say hello, my inbox is always open!
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{% url 'contact' %}" class="btn-primary-custom px-4 py-3">
+          <i class="bi bi-envelope-paper-fill"></i> Send a Message
+        </a>
+        <a href="https://linkedin.com/in/jitendra-jena" target="_blank" rel="noopener noreferrer" class="btn-outline-custom px-4 py-3">
+          <i class="bi bi-linkedin"></i> Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

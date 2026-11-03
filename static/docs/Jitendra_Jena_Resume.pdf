@@ -1,0 +1,72 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 4381 >>
+stream
+BT /F2 20 Tf 50 750 Td (JITENDRA KUMAR JENA) Tj ET
+BT /F1 10 Tf 50 726 Td (Email: jitendrax144@gmail.com | Phone: +91-9348896398 | Kendrapara, Odisha, India) Tj ET
+BT /F1 10 Tf 50 712 Td (LinkedIn: https://www.linkedin.com/in/jitendrax144/ | GitHub: https://github.com/Jitendra14-4) Tj ET
+BT /F2 12 Tf 50 692 Td (PROFESSIONAL SUMMARY) Tj ET
+BT /F1 9.5 Tf 50 676 Td (Motivated and detail-oriented IT professional with 2 years of experience in Quality Analysis, Python Full Stack Development,) Tj ET
+BT /F1 9.5 Tf 50 662.5 Td (and internship experience as a Python Developer. Skilled in developing scalable web applications, software testing, identifying defects,) Tj ET
+BT /F1 9.5 Tf 50 649.0 Td (and data-driven software engineering. Seeking an opportunity to apply technical and analytical skills to high-impact products.) Tj ET
+BT /F2 12 Tf 50 629.5 Td (EXPERIENCE) Tj ET
+BT /F2 10.5 Tf 50 613.5 Td (RMC Govt. -- Quality Analyst \(December 2024 - July 2026\)) Tj ET
+BT /F1 9 Tf 50 599.0 Td (- Working on the Government Paddy Management System, performing system-level quality analysis and validating application functionality.) Tj ET
+BT /F1 9 Tf 50 586.0 Td (- Audited backend processes, database records, system transactions, and generated outputs to ensure accuracy and compliance.) Tj ET
+BT /F1 9 Tf 50 573.0 Td (- Identified bugs, data mismatches, and functional issues during system testing; verified bug fixes and end-to-end integration.) Tj ET
+BT /F2 10.5 Tf 50 560.0 Td (SEEREE, Bhubaneswar -- Python Full-Stack Development Intern \(June 2023 - October 2024\)) Tj ET
+BT /F1 9 Tf 50 545.5 Td (- Developed and deployed full-stack web applications using Python, Django, Flask, HTML, CSS, JavaScript, and Bootstrap.) Tj ET
+BT /F1 9 Tf 50 532.5 Td (- Engineered RESTful APIs, database schema operations, and integrated third-party services.) Tj ET
+BT /F1 9 Tf 50 519.5 Td (- Utilized Git and GitHub for version control, collaborative branching, and production deployment.) Tj ET
+BT /F2 12 Tf 50 500.5 Td (PROJECTS) Tj ET
+BT /F2 10 Tf 50 484.5 Td (Student Management System & QA Chatbot -- Python + Flask + MySQL + RAG) Tj ET
+BT /F1 9 Tf 50 470.5 Td (- Built an intelligent QA chatbot using Retrieval-Augmented Generation \(RAG\); achieved 90% test accuracy with in-memory caching.) Tj ET
+BT /F2 10 Tf 50 457.5 Td (Student Marks Prediction System -- Python + Scikit-Learn + Flask) Tj ET
+BT /F1 9 Tf 50 443.5 Td (- Implemented regression model predicting student academic performance based on study hours and attendance; 92% R2 score.) Tj ET
+BT /F2 10 Tf 50 430.5 Td (Electronic Hospital Management System -- Python + Django/Flask + MySQL + REST API) Tj ET
+BT /F1 9 Tf 50 416.5 Td (- Created full-featured healthcare portal for patient records, doctor appointment scheduling, and automated billing.) Tj ET
+BT /F2 10 Tf 50 403.5 Td (Sales Data Analysis Dashboard -- Python + Pandas + SQL + Power BI) Tj ET
+BT /F1 9 Tf 50 389.5 Td (- Cleaned and analyzed retail sales datasets with Pandas; designed interactive dashboards for revenue and profit trend tracking.) Tj ET
+BT /F2 10 Tf 50 376.5 Td (Paddy Moisture Detection System -- Python + Machine Learning + IoT Data Analysis) Tj ET
+BT /F1 9 Tf 50 362.5 Td (- Developed classification engine to evaluate paddy moisture levels and recommend procurement suitability based on sensor metrics.) Tj ET
+BT /F2 12 Tf 50 343.5 Td (EDUCATION) Tj ET
+BT /F2 10 Tf 50 327.5 Td (B.Tech in Computer Science and Engineering -- NM Institute of Engineering and Technology \(2018 - 2022\) | CGPA: 8.00 / 10) Tj ET
+BT /F2 10 Tf 50 313.5 Td (Intermediate Science -- Ganesh Institute of Technology, BBSR \(2016 - 2018\) | 54.5%) Tj ET
+BT /F2 10 Tf 50 299.5 Td (Matriculation -- Laxmi Baraha High School Hatina \(2015\) | 74.5%) Tj ET
+BT /F2 12 Tf 50 279.5 Td (TECHNICAL SKILLS & CERTIFICATIONS) Tj ET
+BT /F1 9 Tf 50 263.5 Td (- Languages: Python, JavaScript, HTML5, CSS3 | Frameworks: Flask, Django, React, Bootstrap 5) Tj ET
+BT /F1 9 Tf 50 250.5 Td (- Data Science & ML: NumPy, Pandas, Scikit-learn, Statistics, Matplotlib, Seaborn, EDA) Tj ET
+BT /F1 9 Tf 50 237.5 Td (- Databases & Tools: MySQL, SQLite, MongoDB, Git, GitHub, VS Code, Excel, Power BI | Networking: TCP/IP, HTTP/HTTPS, REST APIs) Tj ET
+BT /F1 9 Tf 50 224.5 Td (- Certifications: EY & Microsoft AI Skills Passport | Future Agents Agentic AI Assessment | LLM for Young Developers) Tj ET
+
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4829
+%%EOF

@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}Jitendra Jena — Python Developer | AI & Data Science{% endblock %}</title>
+  <meta name="description" content="Personal portfolio of Jitendra Jena, Python Developer and AI & Data Science enthusiast showcasing Django web systems, Machine Learning, and Data Analytics projects.">
+  <meta name="author" content="Jitendra Jena">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons & Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top" id="mainNavbar">
+    <div class="container">
+      <!-- Brand Logo / Name -->
+      <a class="navbar-brand-name" href="{% url 'home' %}">
+        <span class="brand-dot"></span>
+        <span class="fw-bold tracking-tight">JITENDRA JENA</span>
+      </a>
+
+      <!-- Right mobile controls: Theme button + Toggler -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="theme-toggle-btn" id="themeToggleBtnMobile" type="button" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill" id="themeToggleIconMobile"></i>
+        </button>
+        <button class="navbar-toggler border-0 shadow-none text-light" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavContent" aria-controls="portfolioNavContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2" style="color: var(--accent-blue);"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="portfolioNavContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom {% if active_page == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom {% if active_page == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom {% if active_page == 'projects' %}active{% endif %}" href="{% url 'projects' %}">Projects / Images</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom {% if active_page == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+          </li>
+
+          <!-- Desktop Theme Switcher Button -->
+          <li class="nav-item ms-lg-3 d-none d-lg-block">
+            <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle Dark and Light theme" title="Toggle Theme">
+              <i class="bi bi-sun-fill" id="themeToggleIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash Notification / Messages Container -->
+  {% if messages %}
+  <div class="container mt-4">
+    {% for message in messages %}
+    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show border-0 shadow-sm" role="alert" style="background-color: {% if message.tags == 'success' %}rgba(16, 185, 129, 0.2){% else %}rgba(239, 68, 68, 0.2){% endif %}; color: var(--text-primary); border-left: 4px solid {% if message.tags == 'success' %}var(--accent-green){% else %}#ef4444{% endif %} !important;">
+      <div class="d-flex align-items-center gap-2">
+        {% if message.tags == 'success' %}
+          <i class="bi bi-check-circle-fill fs-5 text-success"></i>
+        {% else %}
+          <i class="bi bi-exclamation-triangle-fill fs-5 text-danger"></i>
+        {% endif %}
+        <div>{{ message }}</div>
+      </div>
+      <button type="button" class="btn-close shadow-none" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Main Content Block -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal fade lightbox-modal" id="projectLightboxModal" tabindex="-1" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+          <h5 class="modal-title fw-bold" id="lightboxTitle">Project Preview</h5>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+        </div>
+        <div class="lightbox-img-wrapper">
+          <img id="lightboxImage" src="" alt="Project Preview Screenshot" class="img-fluid">
+        </div>
+        <div class="modal-body p-4">
+          <div id="lightboxTech" class="mb-3"></div>
+          <p id="lightboxDescription" class="text-muted-custom mb-0"></p>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" class="btn-outline-custom py-2 px-3 fs-6" data-bs-dismiss="modal">Close</button>
+          <div class="d-flex gap-2">
+            <a id="lightboxGithub" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline-custom py-2 px-3 fs-6">
+              <i class="bi bi-github"></i> Source Code
+            </a>
+            <a id="lightboxDemo" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-custom py-2 px-3 fs-6">
+              <i class="bi bi-box-arrow-up-right"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Col 1: Bio / Title -->
+        <div class="col-lg-5 col-md-6">
+          <div class="navbar-brand-name mb-3">
+            <span class="brand-dot"></span>
+            <span class="fw-bold tracking-tight">JITENDRA JENA</span>
+          </div>
+          <p class="text-muted-custom mb-3 pe-lg-4">
+            Passionate Python Developer and AI & Data Science enthusiast focused on building reliable Django web systems, data analysis pipelines, and intelligent machine learning applications.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://github.com/jitendrajena" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/jitendra-jena" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:jitendra.jena@example.com" class="social-icon-btn" aria-label="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3 text-uppercase" style="letter-spacing: 0.05em; color: var(--accent-blue);">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'home' %}" class="footer-link">Home</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Me</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Projects & Gallery</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+            <li><a href="{% static 'docs/Jitendra_Jena_Resume.pdf' %}" download class="footer-link text-success"><i class="bi bi-file-earmark-arrow-down me-1"></i> Download Resume</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="col-lg-4 col-md-12">
+          <h6 class="fw-bold mb-3 text-uppercase" style="letter-spacing: 0.05em; color: var(--accent-green);">Get In Touch</h6>
+          <p class="text-muted-custom mb-2">
+            <i class="bi bi-envelope me-2 text-primary"></i> jitendra.jena@example.com
+          </p>
+          <p class="text-muted-custom mb-2">
+            <i class="bi bi-geo-alt me-2 text-danger"></i> India (Open to Remote & Global Relocation)
+          </p>
+          <p class="text-muted-custom mb-3">
+            <i class="bi bi-clock me-2 text-success"></i> Available for Full-Time & Internship Roles
+          </p>
+          <a href="{% url 'contact' %}" class="btn-primary-custom py-2 px-3 fs-6">
+            <i class="bi bi-send-fill"></i> Send a Message
+          </a>
+        </div>
+      </div>
+
+      <hr style="border-color: var(--border-color); opacity: 0.7;">
+
+      <!-- Bottom Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 gap-2">
+        <p class="text-muted-custom mb-0 small">
+          &copy; <span id="currentYear">{% now "Y" %}</span> Jitendra Jena. All rights reserved. Crafted with Django & modern CSS.
+        </p>
+        <p class="text-muted-custom mb-0 small">
+          Python Developer | AI & Data Science
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back To Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top">
+    <i class="bi bi-arrow-up-short fs-2"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+  <!-- Sync mobile toggle with main toggle -->
+  <script>
+    const mobileBtn = document.getElementById('themeToggleBtnMobile');
+    const mainBtn = document.getElementById('themeToggleBtn');
+    if (mobileBtn && mainBtn) {
+      mobileBtn.addEventListener('click', () => {
+        mainBtn.click();
+        const activeTheme = document.documentElement.getAttribute('data-theme');
+        const mobIcon = document.getElementById('themeToggleIconMobile');
+        if (mobIcon) {
+          mobIcon.className = activeTheme === 'light' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+        }
+      });
+    }
+  </script>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

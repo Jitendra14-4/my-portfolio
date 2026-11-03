@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8c291" />
+      <stop offset="100%" stop-color="#e17055" />
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#00f2fe" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop -->
+  <rect width="600" height="600" rx="300" fill="url(#bgGrad)" />
+  
+  <!-- Outer Glow Rings -->
+  <circle cx="300" cy="300" r="285" fill="none" stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="12 8" opacity="0.6"/>
+  <circle cx="300" cy="300" r="260" fill="#131d33" />
+
+  <!-- Code/Matrix Grid Background Hints -->
+  <g opacity="0.15" stroke="#38bdf8" stroke-width="1">
+    <path d="M120 180 h360 M120 220 h360 M120 260 h360 M120 300 h360 M120 340 h360 M120 380 h360" />
+    <path d="M160 140 v320 M220 140 v320 M280 140 v320 M340 140 v320 M400 140 v320 M460 140 v320" />
+  </g>
+
+  <!-- Developer Silhouette / Character -->
+  <g filter="url(#shadow)">
+    <!-- Shoulders / Hoodie -->
+    <path d="M180 520 C 180 430, 230 400, 300 400 C 370 400, 420 430, 420 520 Z" fill="url(#suitGrad)" stroke="#38bdf8" stroke-width="2" />
+    
+    <!-- Neck -->
+    <rect x="275" y="340" width="50" height="70" rx="10" fill="url(#skinGrad)" />
+    
+    <!-- Head -->
+    <ellipse cx="300" cy="270" rx="65" ry="80" fill="url(#skinGrad)" />
+
+    <!-- Hair -->
+    <path d="M230 260 C 230 180, 270 170, 300 170 C 340 170, 370 190, 370 260 C 355 235, 330 230, 300 230 C 265 230, 245 245, 230 260 Z" fill="#1e1e24" />
+
+    <!-- Glasses (Smart Developer look) -->
+    <rect x="250" y="250" width="38" height="28" rx="8" fill="none" stroke="#38bdf8" stroke-width="4" />
+    <rect x="312" y="250" width="38" height="28" rx="8" fill="none" stroke="#38bdf8" stroke-width="4" />
+    <line x1="288" y1="264" x2="312" y2="264" stroke="#38bdf8" stroke-width="4" />
+    
+    <!-- Eyes behind glasses -->
+    <circle cx="269" cy="264" r="5" fill="#1e1e24" />
+    <circle cx="331" cy="264" r="5" fill="#1e1e24" />
+    
+    <!-- Friendly Smile -->
+    <path d="M285 305 Q300 320 315 305" fill="none" stroke="#873e23" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Laptop / Desk Element -->
+  <path d="M210 510 L390 510 L415 545 L185 545 Z" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+  <rect x="250" y="475" width="100" height="5" rx="2" fill="#38bdf8" opacity="0.8" />
+
+  <!-- Floating Tech Badges -->
+  <!-- Python Badge -->
+  <g transform="translate(110, 210)">
+    <rect width="70" height="70" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+    <text x="35" y="42" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#38bdf8" text-anchor="middle">&lt;Py&gt;</text>
+  </g>
+
+  <!-- AI / Brain Badge -->
+  <g transform="translate(420, 210)">
+    <rect width="70" height="70" rx="18" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+    <text x="35" y="44" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">AI</text>
+  </g>
+
+  <!-- Data Science / Stats Badge -->
+  <g transform="translate(370, 380)">
+    <rect width="115" height="42" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" />
+    <circle cx="20" cy="21" r="6" fill="#10b981" />
+    <text x="65" y="26" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Data Science</text>
+  </g>
+
+  <!-- Status Pill -->
+  <g transform="translate(115, 380)">
+    <rect width="115" height="42" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="20" cy="21" r="5" fill="#38bdf8" />
+    <text x="65" y="26" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Python Dev</text>
+  </g>
+</svg>

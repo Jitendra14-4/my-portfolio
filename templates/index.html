@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Jitendra Kumar Jena — Python Full Stack Developer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Jitendra Kumar Jena, Python Full Stack Developer and AI & Data Science Enthusiast. Specializing in Python, Django, Flask, Scikit-learn, and SQL.">
+  <meta name="author" content="Jitendra Kumar Jena">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons & Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
+
+  <!-- Background Interactive Particles Canvas -->
+  <canvas id="particles-canvas" class="particles-bg" aria-hidden="true"></canvas>
+
+  <!-- Ambient Gradient Lighting Orbs -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-center" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+      <div class="container">
+        <!-- Brand Logo / Name -->
+        <a class="navbar-brand-name" href="#home">
+          <span class="brand-pulse"></span>
+          <span class="brand-text">JITENDRA <span class="text-gradient">JENA</span></span>
+        </a>
+
+        <!-- Mobile Controls (Theme Switcher + Nav Hamburger) -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button class="theme-toggle-btn" id="themeToggleBtnMobile" type="button" aria-label="Toggle dark and light theme">
+            <i class="bi bi-sun-fill" id="themeToggleIconMobile"></i>
+          </button>
+          <button class="navbar-toggler border-0 shadow-none text-light" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavContent" aria-controls="portfolioNavContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1 text-primary"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="portfolioNavContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#contact">Contact</a>
+            </li>
+
+            <!-- Desktop Theme Switcher Button -->
+            <li class="nav-item ms-lg-2 d-none d-lg-block">
+              <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle Dark and Light theme" title="Toggle Theme">
+                <i class="bi bi-sun-fill" id="themeToggleIcon"></i>
+              </button>
+            </li>
+
+            <!-- Direct Quick Hire CTA -->
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a href="#contact" class="btn-primary-custom py-2 px-3 fs-6">
+                <i class="bi bi-send-fill me-1"></i> Let's Talk
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         A. HOME / HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center g-5 min-vh-90">
+          
+          <!-- Left Hero Intro -->
+          <div class="col-lg-7 text-center text-lg-start">
+            <div class="hero-badge reveal-item">
+              <span class="status-indicator"></span>
+              <span>Available for Full Stack &amp; AI / Data Science Roles</span>
+            </div>
+
+            <h1 class="hero-title reveal-item">
+              Hi, I'm <span class="text-gradient">Jitendra Kumar Jena</span>
+            </h1>
+
+            <div class="hero-subtitle reveal-item">
+              <span class="code-bracket">&lt;</span>
+              <span id="typewriterText">Python Full Stack Developer</span>
+              <span class="cursor-blink">|</span>
+              <span class="code-bracket">/&gt;</span>
+            </div>
+
+            <p class="hero-description reveal-item">
+              Passionate engineer with <strong>2 years of experience in Quality Analysis</strong> and hands-on expertise building full-stack web architectures with <strong>Python, Django, and Flask</strong>, paired with intelligent predictive pipelines in <strong>NumPy, Pandas, Scikit-learn, and Machine Learning</strong>. Dedicated to architecting reliable software and data-driven solutions.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4 reveal-item">
+              <a href="#projects" class="btn-primary-custom">
+                <i class="bi bi-grid-fill"></i>
+                <span>Explore My Projects</span>
+              </a>
+              <a href="#contact" class="btn-outline-custom">
+                <i class="bi bi-envelope-paper-fill"></i>
+                <span>Contact Me</span>
+              </a>
+              <a href="{{ url_for('download_resume') }}" class="btn-outline-custom btn-resume-cta" title="Download Jitendra's Complete Resume PDF">
+                <i class="bi bi-file-earmark-arrow-down-fill text-success"></i>
+                <span>Download Resume</span>
+              </a>
+            </div>
+
+            <!-- Social Media & Contact Links -->
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 pt-2 reveal-item">
+              <span class="small text-muted-custom fw-semibold">Connect with me:</span>
+              <a href="https://github.com/Jitendra14-4" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub: Jitendra14-4">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/jitendrax144/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn: jitendrax144">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:jitendrax144@gmail.com" class="social-icon-btn" aria-label="Send Email" title="Email: jitendrax144@gmail.com">
+                <i class="bi bi-envelope-at-fill"></i>
+              </a>
+              <a href="tel:+919348896398" class="social-icon-btn" aria-label="Call Phone" title="Phone: +91-9348896398">
+                <i class="bi bi-telephone-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Hero Profile Artwork with Glowing Orbit -->
+          <div class="col-lg-5 text-center">
+            <div class="profile-hero-wrapper reveal-item">
+              
+              <!-- Floating Badge 1: Python & Django -->
+              <div class="floating-pill pill-top-left">
+                <div class="pill-icon-box bg-blue">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="pill-text-box">
+                  <div class="pill-title">Python &amp; Django</div>
+                  <div class="pill-subtitle">Backend Architecture</div>
+                </div>
+              </div>
+
+              <!-- Main Avatar with Animated Neon Glow Ring -->
+              <div class="avatar-glow-ring">
+                <div class="avatar-inner">
+                  <img src="{{ url_for('static', filename='images/profile-avatar.svg') }}" 
+                       alt="Jitendra Kumar Jena — Python Developer & AI Enthusiast" 
+                       class="img-fluid hero-avatar-img">
+                </div>
+              </div>
+
+              <!-- Floating Badge 2: AI & Data Science -->
+              <div class="floating-pill pill-bottom-right">
+                <div class="pill-icon-box bg-emerald">
+                  <i class="bi bi-cpu-fill"></i>
+                </div>
+                <div class="pill-text-box">
+                  <div class="pill-title">AI &amp; Data Science</div>
+                  <div class="pill-subtitle">ML Models &amp; RAG</div>
+                </div>
+              </div>
+
+              <!-- Floating Badge 3: Quality Analysis -->
+              <div class="floating-pill pill-bottom-left">
+                <div class="pill-icon-box bg-purple">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div class="pill-text-box">
+                  <div class="pill-title">Quality Analysis</div>
+                  <div class="pill-subtitle">2 Years Verified</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         B. ABOUT SECTION
+         ========================================================================== -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Biography &amp; Journey</span>
+          <h2 class="section-title">Architecting Code &amp; Data Intelligence</h2>
+          <p class="section-subtitle">
+            A synthesis of robust backend engineering, full-stack web applications, rigorous software testing, and modern data science analytics.
+          </p>
+        </div>
+
+        <!-- Bio Content & Highlight Cards -->
+        <div class="row align-items-center g-5 mb-5">
+          <!-- Left Column: Avatar & Download -->
+          <div class="col-lg-5 text-center reveal-item">
+            <div class="about-card p-4">
+              <div class="about-image-wrapper mb-4">
+                <img src="{{ url_for('static', filename='images/profile-avatar.svg') }}" alt="Jitendra Kumar Jena" class="img-fluid rounded-4">
+              </div>
+              <h3 class="h4 fw-bold mb-1 text-light">Jitendra Kumar Jena</h3>
+              <p class="text-primary-custom small mb-3">Python Full Stack Developer &amp; QA Specialist</p>
+              
+              <div class="d-flex justify-content-center align-items-center gap-2 mb-4 text-muted-custom small">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span>Kendrapara, Odisha, India</span>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="{{ url_for('download_resume') }}" class="btn-primary-custom justify-content-center py-3">
+                  <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                  <span>Download Full Resume (PDF)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative & Metrics -->
+          <div class="col-lg-7 reveal-item">
+            <span class="section-tag mb-2">Professional Background</span>
+            <h3 class="h3 fw-bold mb-3">Engineering High-Performance Web &amp; Analytical Systems</h3>
+            <p class="text-muted-custom mb-3">
+              Hello! I'm <strong>Jitendra Kumar Jena</strong>, a software engineer with <strong>2 years of professional Quality Analysis experience</strong> at RMC Govt. working on large-scale Government Paddy Management Systems, combined with proven practical development expertise in <strong>Python, Django, Flask, and Scikit-learn</strong>.
+            </p>
+            <p class="text-muted-custom mb-4">
+              My engineering philosophy revolves around building bulletproof systems: from architecting role-based enterprise portals and hospital record management systems to integrating <strong>Retrieval-Augmented Generation (RAG)</strong> chatbots and training IoT-driven Machine Learning classification models for agricultural compliance.
+            </p>
+
+            <!-- Metrics Matrix with Animated Counters -->
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3">
+                <div class="stat-box">
+                  <div class="stat-number text-gradient" data-target="2">0</div>
+                  <div class="stat-unit">+</div>
+                  <div class="stat-label">Years QA &amp; Tech</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-box">
+                  <div class="stat-number text-gradient" data-target="90">0</div>
+                  <div class="stat-unit">%</div>
+                  <div class="stat-label">RAG Accuracy</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-box">
+                  <div class="stat-number text-gradient" data-target="6">0</div>
+                  <div class="stat-unit">+</div>
+                  <div class="stat-label">Production Apps</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-box">
+                  <div class="stat-number text-gradient" data-target="100">0</div>
+                  <div class="stat-unit">%</div>
+                  <div class="stat-label">Test Integrity</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Attributes Grid -->
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="fact-card">
+                  <i class="bi bi-mortarboard-fill text-info fs-4"></i>
+                  <div>
+                    <div class="small text-muted-custom">Education</div>
+                    <div class="fw-semibold text-light">B.Tech in CSE (8.00 CGPA)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="fact-card">
+                  <i class="bi bi-briefcase-fill text-success fs-4"></i>
+                  <div>
+                    <div class="small text-muted-custom">Current Focus</div>
+                    <div class="fw-semibold text-light">Full-Stack &amp; AI Integration</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="fact-card">
+                  <i class="bi bi-layers-fill text-primary fs-4"></i>
+                  <div>
+                    <div class="small text-muted-custom">Core Stack</div>
+                    <div class="fw-semibold text-light">Python, Flask, Django, SQL</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="fact-card">
+                  <i class="bi bi-check-circle-fill text-emerald fs-4"></i>
+                  <div>
+                    <div class="small text-muted-custom">Availability</div>
+                    <div class="fw-semibold text-success">Open for Roles Worldwide</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Skill Progress Bars & Certifications -->
+        <div class="row g-4 pt-3">
+          <!-- Skill Progress Indicators -->
+          <div class="col-lg-6 reveal-item">
+            <div class="glass-panel p-4 h-100">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="icon-cube text-primary">
+                  <i class="bi bi-speedometer2 fs-4"></i>
+                </div>
+                <div>
+                  <h4 class="h5 fw-bold mb-0 text-light">Technical Proficiency</h4>
+                  <p class="text-muted-custom small mb-0">Demonstrated proficiency across software domains</p>
+                </div>
+              </div>
+
+              <!-- Bar 1: Python -->
+              <div class="skill-progress-item mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="skill-name-label"><i class="fa-brands fa-python text-primary me-2"></i>Python &amp; OOP Architecture</span>
+                  <span class="skill-percent-label">95%</span>
+                </div>
+                <div class="progress progress-custom">
+                  <div class="progress-bar progress-bar-gradient" role="progressbar" style="width: 0%;" data-progress="95" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <!-- Bar 2: Django & Flask -->
+              <div class="skill-progress-item mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="skill-name-label"><i class="bi bi-lightning-charge-fill text-warning me-2"></i>Django &amp; Flask Backend APIs</span>
+                  <span class="skill-percent-label">90%</span>
+                </div>
+                <div class="progress progress-custom">
+                  <div class="progress-bar progress-bar-gradient" role="progressbar" style="width: 0%;" data-progress="90" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <!-- Bar 3: SQL & Relational Databases -->
+              <div class="skill-progress-item mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="skill-name-label"><i class="fa-solid fa-database text-info me-2"></i>SQL, MySQL &amp; SQLite Schema Design</span>
+                  <span class="skill-percent-label">88%</span>
+                </div>
+                <div class="progress progress-custom">
+                  <div class="progress-bar progress-bar-gradient" role="progressbar" style="width: 0%;" data-progress="88" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <!-- Bar 4: Machine Learning & Pandas -->
+              <div class="skill-progress-item mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="skill-name-label"><i class="bi bi-cpu-fill text-success me-2"></i>Data Science, Pandas &amp; Scikit-Learn</span>
+                  <span class="skill-percent-label">86%</span>
+                </div>
+                <div class="progress progress-custom">
+                  <div class="progress-bar progress-bar-gradient" role="progressbar" style="width: 0%;" data-progress="86" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <!-- Bar 5: Quality Analysis & System Testing -->
+              <div class="skill-progress-item mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="skill-name-label"><i class="bi bi-shield-check text-danger me-2"></i>System Testing &amp; Quality Analysis</span>
+                  <span class="skill-percent-label">92%</span>
+                </div>
+                <div class="progress progress-custom">
+                  <div class="progress-bar progress-bar-gradient" role="progressbar" style="width: 0%;" data-progress="92" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <!-- Bar 6: HTML5/CSS3/Vanilla JS -->
+              <div class="skill-progress-item">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="skill-name-label"><i class="fa-brands fa-js text-warning me-2"></i>Frontend UI (HTML5, CSS3, ES6+ JavaScript)</span>
+                  <span class="skill-percent-label">85%</span>
+                </div>
+                <div class="progress progress-custom">
+                  <div class="progress-bar progress-bar-gradient" role="progressbar" style="width: 0%;" data-progress="85" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Professional Certifications Showcase -->
+          <div class="col-lg-6 reveal-item">
+            <div class="glass-panel p-4 h-100">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="icon-cube text-emerald">
+                  <i class="bi bi-patch-check-fill fs-4"></i>
+                </div>
+                <div>
+                  <h4 class="h5 fw-bold mb-0 text-light">Honors &amp; Certifications</h4>
+                  <p class="text-muted-custom small mb-0">Industry-accredited specializations and credentials</p>
+                </div>
+              </div>
+
+              <div class="certification-grid d-flex flex-column gap-3">
+                <!-- Cert 1 -->
+                <div class="cert-item p-3 rounded-3">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="cert-icon-badge text-primary">
+                      <i class="bi bi-award-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <h5 class="h6 fw-bold mb-1 text-light">AI Skills Passport for Older Adults</h5>
+                      <div class="text-primary-custom small fw-semibold">EY &amp; Microsoft</div>
+                      <p class="text-muted-custom small mb-0">Practical Artificial Intelligence literacy, ethics, and assistive LLM deployment certification.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-item p-3 rounded-3">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="cert-icon-badge text-emerald">
+                      <i class="bi bi-robot fs-4"></i>
+                    </div>
+                    <div>
+                      <h5 class="h6 fw-bold mb-1 text-light">Agentic AI Assessment</h5>
+                      <div class="text-success small fw-semibold">Future Agents</div>
+                      <p class="text-muted-custom small mb-0">Autonomous AI workflows, goal-directed planning, API orchestration, and agentic reasoning.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-item p-3 rounded-3">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="cert-icon-badge text-info">
+                      <i class="bi bi-diagram-3-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <h5 class="h6 fw-bold mb-1 text-light">LLM for Young Developers</h5>
+                      <div class="text-info small fw-semibold">Foundational Course</div>
+                      <p class="text-muted-custom small mb-0">Comprehensive training in Prompt Engineering, RAG embeddings, vector databases, and transformers.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-item p-3 rounded-3">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="cert-icon-badge text-warning">
+                      <i class="fa-brands fa-python fs-4"></i>
+                    </div>
+                    <div>
+                      <h5 class="h6 fw-bold mb-1 text-light">Python Full-Stack Development Certificate</h5>
+                      <div class="text-warning small fw-semibold">SEEREE Developer Internship</div>
+                      <p class="text-muted-custom small mb-0">End-to-end web engineering with Django, REST frameworks, database migrations, and testing.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         C. SKILLS SECTION
+         ========================================================================== -->
+    <section class="section-padding bg-alt-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical Skills &amp; Stack</h2>
+          <p class="section-subtitle">
+            A balanced developer toolkit spanning backend microservices, data wrangling, machine learning models, database modeling, and frontend integration.
+          </p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-btn-group reveal-item mb-5 text-center">
+          <button type="button" class="skill-filter-btn active" data-skill-filter="all">All Skills</button>
+          <button type="button" class="skill-filter-btn" data-skill-filter="programming">Programming</button>
+          <button type="button" class="skill-filter-btn" data-skill-filter="frameworks">Frameworks</button>
+          <button type="button" class="skill-filter-btn" data-skill-filter="data-science">Data Science &amp; ML</button>
+          <button type="button" class="skill-filter-btn" data-skill-filter="databases">Databases</button>
+          <button type="button" class="skill-filter-btn" data-skill-filter="tools">Tools &amp; Analytics</button>
+          <button type="button" class="skill-filter-btn" data-skill-filter="core">Core &amp; QA</button>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="row g-4" id="skillsGrid">
+          
+          <!-- Programming: Python -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="programming">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-primary">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">Python</h3>
+              <p class="skill-desc">OOP, Data Structures, Decorators, Generators, AsyncIO &amp; REST.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 95%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Programming: JavaScript -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="programming">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-warning">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <span class="skill-pill">Proficient</span>
+              </div>
+              <h3 class="skill-title">JavaScript (ES6+)</h3>
+              <p class="skill-desc">DOM Manipulation, Async/Await, Fetch API, Event Handling &amp; JSON.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 85%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Programming: HTML5 & CSS3 -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="programming">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-danger">
+                  <i class="fa-brands fa-html5"></i>
+                </div>
+                <span class="skill-pill">Expert</span>
+              </div>
+              <h3 class="skill-title">HTML5 &amp; CSS3</h3>
+              <p class="skill-desc">Semantic Markup, Flexbox, CSS Grid, Transitions, Keyframes &amp; SVG.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Framework: Flask -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="frameworks">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-info">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">Flask</h3>
+              <p class="skill-desc">Microservices, RESTful Endpoints, Jinja2, Blueprints &amp; Middleware.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Framework: Django -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="frameworks">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-success">
+                  <i class="bi bi-layers-fill"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">Django</h3>
+              <p class="skill-desc">MVT Architecture, ORM Optimization, Admin Portal, Auth &amp; DRF.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Framework: React & Bootstrap -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="frameworks">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-cyan">
+                  <i class="fa-brands fa-react"></i>
+                </div>
+                <span class="skill-pill">Proficient</span>
+              </div>
+              <h3 class="skill-title">React &amp; Bootstrap 5</h3>
+              <p class="skill-desc">Modular Components, State, Hooks, Responsive Grids &amp; Glassmorphism.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 82%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Data Science: NumPy & Pandas -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="data-science">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-primary">
+                  <i class="bi bi-table"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">NumPy &amp; Pandas</h3>
+              <p class="skill-desc">Multi-dimensional Arrays, Data Cleaning, Wrangling &amp; Series Analysis.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Data Science: Matplotlib & Seaborn -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="data-science">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-warning">
+                  <i class="bi bi-bar-chart-fill"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">Matplotlib &amp; Seaborn</h3>
+              <p class="skill-desc">Exploratory Data Analysis (EDA), Statistical Distributions &amp; Heatmaps.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Data Science: Machine Learning & Scikit-learn -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="data-science">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-emerald">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <span class="skill-pill">Proficient</span>
+              </div>
+              <h3 class="skill-title">Machine Learning (Scikit-Learn)</h3>
+              <p class="skill-desc">Regression, Decision Trees, Random Forest, Clustering &amp; Metrics.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 85%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Databases: MySQL -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="databases">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-info">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">MySQL &amp; SQL</h3>
+              <p class="skill-desc">Relational Schema, Complex Joins, Indexing, Transactions &amp; Constraints.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Databases: SQLite -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="databases">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-primary">
+                  <i class="bi bi-server"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">SQLite</h3>
+              <p class="skill-desc">Embedded Storage, Lightweight DB Architecture &amp; Migration Pipelines.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Databases: MongoDB -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="databases">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-success">
+                  <i class="bi bi-diagram-2-fill"></i>
+                </div>
+                <span class="skill-pill">Intermediate</span>
+              </div>
+              <h3 class="skill-title">MongoDB</h3>
+              <p class="skill-desc">NoSQL Document Collections, Aggregation Pipeline &amp; BSON schemas.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 78%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Tools: Git & GitHub -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="tools">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-danger">
+                  <i class="fa-brands fa-git-alt"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">Git &amp; GitHub</h3>
+              <p class="skill-desc">Branching, Pull Requests, Merge Conflict Resolution &amp; Collaborative CI.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Tools: Power BI & Excel -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="tools">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-warning">
+                  <i class="bi bi-pie-chart-fill"></i>
+                </div>
+                <span class="skill-pill">Proficient</span>
+              </div>
+              <h3 class="skill-title">Power BI &amp; MS Excel</h3>
+              <p class="skill-desc">Interactive Dashboards, Pivot Tables, DAX Formulas &amp; KPI Visualization.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 85%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Tools: VS Code & Dev Environment -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="tools">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-primary">
+                  <i class="bi bi-terminal-fill"></i>
+                </div>
+                <span class="skill-pill">Expert</span>
+              </div>
+              <h3 class="skill-title">VS Code &amp; Linux/Windows</h3>
+              <p class="skill-desc">CLI Shell, Virtual Environments, Debugging, Linters &amp; Extensions.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 94%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Core: Networking & Quality Analysis -->
+          <div class="col-xl-3 col-lg-4 col-md-6 skill-grid-card" data-skill-category="core">
+            <div class="skill-card-modern">
+              <div class="skill-card-top">
+                <div class="skill-icon-box text-emerald">
+                  <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <span class="skill-pill">Advanced</span>
+              </div>
+              <h3 class="skill-title">QA, Testing &amp; Protocols</h3>
+              <p class="skill-desc">TCP/IP, HTTP/HTTPS, REST Standards, System Regression &amp; Defect Audits.</p>
+              <div class="skill-meter"><div class="skill-meter-fill" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         D. PROJECTS SECTION
+         ========================================================================== -->
+    <section class="section-padding" id="projects">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Engineered Projects &amp; Systems</h2>
+          <p class="section-subtitle">
+            Explore production web applications, machine learning predictive models, IoT monitoring frameworks, and automated RAG chatbots.
+          </p>
+
+          <!-- Search & Filter Controls -->
+          <div class="row justify-content-center mt-4">
+            <div class="col-md-7 col-lg-5">
+              <div class="search-input-wrapper">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" id="projectSearchInput" class="form-control project-search-field" placeholder="Search by name, technology (e.g. Flask, RAG, ML, SQL)..." aria-label="Search projects">
+                <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Clear Search" style="display: none;">
+                  <i class="bi bi-x-circle-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Category Filters -->
+        <div class="filter-btn-group reveal-item mb-5 text-center">
+          <button type="button" class="project-filter-btn active" data-filter="all">All Projects ({{ projects|length }})</button>
+          <button type="button" class="project-filter-btn" data-filter="fullstack">Full Stack Web</button>
+          <button type="button" class="project-filter-btn" data-filter="machine-learning">Machine Learning &amp; AI</button>
+          <button type="button" class="project-filter-btn" data-filter="data-analysis">Data Analysis &amp; Dashboards</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row g-4" id="projectsGrid">
+          {% for proj in projects %}
+          <div class="col-lg-6 project-item-card" 
+               data-category="{{ proj.category }}"
+               data-title="{{ proj.title }}"
+               data-tech="{{ proj.technologies }}">
+            
+            <div class="project-glass-card">
+              <!-- Thumbnail Banner -->
+              <div class="project-thumb-container">
+                <img src="{{ url_for('static', filename=proj.image_static) }}" alt="{{ proj.title }}" class="project-thumb-img">
+                <div class="project-thumb-overlay">
+                  <button type="button" class="btn-preview-modal open-project-modal-btn"
+                          data-title="{{ proj.title }}"
+                          data-category="{{ proj.category }}"
+                          data-desc="{{ proj.description }}"
+                          data-tech="{{ proj.technologies }}"
+                          data-image="{{ url_for('static', filename=proj.image_static) }}"
+                          data-github="{{ proj.github_url }}"
+                          data-demo="{{ proj.demo_url }}"
+                          title="View Full Architecture Details">
+                    <i class="bi bi-arrows-fullscreen me-1"></i> Quick View
+                  </button>
+                </div>
+              </div>
+
+              <!-- Card Content -->
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="project-badge text-uppercase">{{ proj.category }}</span>
+                  <span class="project-date-pill">
+                    <i class="bi bi-calendar3 me-1"></i> Production Verified
+                  </span>
+                </div>
+
+                <h3 class="h5 fw-bold mb-2 text-light">{{ proj.title }}</h3>
+                <p class="text-muted-custom small mb-3 flex-grow-1">
+                  {{ proj.short_description }}
+                </p>
+
+                <!-- Tech Tags -->
+                <div class="project-tags-list mb-4">
+                  {% for tech in proj.tech_list %}
+                  <span class="tech-pill">{{ tech }}</span>
+                  {% endfor %}
+                </div>
+
+                <!-- Footer Action Buttons -->
+                <div class="project-card-footer pt-3 d-flex justify-content-between align-items-center border-top">
+                  <button type="button" class="btn-outline-custom btn-sm open-project-modal-btn"
+                          data-title="{{ proj.title }}"
+                          data-category="{{ proj.category }}"
+                          data-desc="{{ proj.description }}"
+                          data-tech="{{ proj.technologies }}"
+                          data-image="{{ url_for('static', filename=proj.image_static) }}"
+                          data-github="{{ proj.github_url }}"
+                          data-demo="{{ proj.demo_url }}">
+                    <i class="bi bi-info-circle-fill me-1"></i> System Specs
+                  </button>
+
+                  <div class="d-flex gap-2">
+                    {% if proj.github_url and proj.github_url != '#' %}
+                    <a href="{{ proj.github_url }}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="width: 36px; height: 36px; font-size: 0.95rem;" title="View Source on GitHub" aria-label="GitHub Code">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    {% endif %}
+                    <button type="button" class="social-icon-btn open-project-modal-btn" style="width: 36px; height: 36px; font-size: 0.95rem;" title="Interactive Preview" aria-label="Interactive Preview"
+                            data-title="{{ proj.title }}"
+                            data-category="{{ proj.category }}"
+                            data-desc="{{ proj.description }}"
+                            data-tech="{{ proj.technologies }}"
+                            data-image="{{ url_for('static', filename=proj.image_static) }}"
+                            data-github="{{ proj.github_url }}"
+                            data-demo="{{ proj.demo_url }}">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Empty State Message when no search results match -->
+        <div id="noProjectsFound" class="text-center py-5" style="display: none;">
+          <div class="p-4 rounded-4 mx-auto glass-panel" style="max-width: 480px;">
+            <i class="bi bi-search text-muted-custom fs-1 mb-3"></i>
+            <h4 class="h5 fw-bold text-light mb-2">No matching projects found</h4>
+            <p class="text-muted-custom small mb-3">Try adjusting your search query or switching categories.</p>
+            <button type="button" id="resetProjectFilterBtn" class="btn-outline-custom btn-sm">
+              <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Filters
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         E. EXPERIENCE & EDUCATION TIMELINE
+         ========================================================================== -->
+    <section class="section-padding bg-alt-section" id="experience">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Track Record</span>
+          <h2 class="section-title">Experience &amp; Academic Timeline</h2>
+          <p class="section-subtitle">
+            A chronological timeline of professional testing, software engineering roles, industry internships, and formal computer science education.
+          </p>
+        </div>
+
+        <div class="row g-5">
+          <!-- Column 1: Work Experience & Internships -->
+          <div class="col-lg-6 reveal-item">
+            <div class="timeline-header-card mb-4 d-flex align-items-center gap-3">
+              <div class="icon-cube text-emerald">
+                <i class="bi bi-briefcase-fill fs-4"></i>
+              </div>
+              <div>
+                <h3 class="h4 fw-bold mb-0 text-light">Professional Experience</h3>
+                <p class="text-muted-custom small mb-0">Quality Analysis &amp; Software Engineering</p>
+              </div>
+            </div>
+
+            <div class="timeline-container">
+              
+              <!-- Experience Item 1: RMC Govt -->
+              <div class="timeline-item-wrapper">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                    <span class="badge-timeline-active">December 2024 – July 2026</span>
+                    <span class="badge-org">RMC Govt.</span>
+                  </div>
+                  <h4 class="h5 fw-bold text-light mb-1">Quality Analyst</h4>
+                  <div class="text-emerald small fw-semibold mb-3">Government Paddy Management System</div>
+                  
+                  <ul class="timeline-points-list small text-muted-custom">
+                    <li>Led system-level quality analysis, operational testing, and functional validation for the multi-tiered Government Paddy Management System.</li>
+                    <li>Audited backend workflows, data pipelines, database record synchronizations, and procurement financial transactions for strict data integrity.</li>
+                    <li>Identified critical functional defects, edge-case glitches, and relational data mismatches during intensive sprint testing.</li>
+                    <li>Executed end-to-end bug retesting, validation scripts, and verification reports post-resolution to guarantee system readiness.</li>
+                  </ul>
+
+                  <div class="timeline-tags-box mt-3">
+                    <span class="mini-tag">System QA</span>
+                    <span class="mini-tag">Backend Verification</span>
+                    <span class="mini-tag">Database Auditing</span>
+                    <span class="mini-tag">Defect Tracking</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience Item 2: SEEREE Intern -->
+              <div class="timeline-item-wrapper">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                    <span class="badge-timeline">June 2023 – October 2024</span>
+                    <span class="badge-org">SEEREE, Bhubaneswar</span>
+                  </div>
+                  <h4 class="h5 fw-bold text-light mb-1">Python Full-Stack Development Intern</h4>
+                  <div class="text-primary-custom small fw-semibold mb-3">Full-Stack Web Engineering Track</div>
+                  
+                  <ul class="timeline-points-list small text-muted-custom">
+                    <li>Developed and deployed production-ready web applications leveraging Python, Django, HTML5, CSS3, JavaScript, and Bootstrap.</li>
+                    <li>Implemented responsive user interfaces, backend database operations (ORM &amp; SQL), authentication flows, and REST endpoints.</li>
+                    <li>Authored automated test cases, identified and debugged application logic bottlenecks, and optimized SQL queries.</li>
+                    <li>Utilized Git and GitHub for version control, collaborative branch reviews, and software release cycles.</li>
+                  </ul>
+
+                  <div class="timeline-tags-box mt-3">
+                    <span class="mini-tag">Python</span>
+                    <span class="mini-tag">Django</span>
+                    <span class="mini-tag">REST APIs</span>
+                    <span class="mini-tag">Git / GitHub</span>
+                    <span class="mini-tag">SQL</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 2: Education & Academic Qualifications -->
+          <div class="col-lg-6 reveal-item">
+            <div class="timeline-header-card mb-4 d-flex align-items-center gap-3">
+              <div class="icon-cube text-primary">
+                <i class="bi bi-mortarboard-fill fs-4"></i>
+              </div>
+              <div>
+                <h3 class="h4 fw-bold mb-0 text-light">Education &amp; Academics</h3>
+                <p class="text-muted-custom small mb-0">Formal Degrees &amp; Technical Foundation</p>
+              </div>
+            </div>
+
+            <div class="timeline-container">
+              
+              <!-- Education Item 1: B.Tech -->
+              <div class="timeline-item-wrapper">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                    <span class="badge-timeline">2018 – 2022</span>
+                    <span class="badge-grade">CGPA: 8.00 / 10</span>
+                  </div>
+                  <h4 class="h5 fw-bold text-light mb-1">B.Tech in Computer Science and Engineering</h4>
+                  <div class="text-info small fw-semibold mb-3">NM Institute of Engineering and Technology</div>
+                  
+                  <p class="text-muted-custom small mb-2">
+                    Graduated with First Class Honors in Computer Science and Engineering. Comprehensive academic curriculum encompassing:
+                  </p>
+                  <ul class="timeline-points-list small text-muted-custom">
+                    <li>Data Structures, Algorithms &amp; Computational Complexity Analysis</li>
+                    <li>Relational Database Management Systems (RDBMS &amp; SQL Normalization)</li>
+                    <li>Object-Oriented Programming (Python, C++, Java) &amp; Software Design Patterns</li>
+                    <li>Operating Systems, TCP/IP Computer Networks &amp; Web Security</li>
+                  </ul>
+
+                  <div class="timeline-tags-box mt-3">
+                    <span class="mini-tag">Computer Science</span>
+                    <span class="mini-tag">DBMS</span>
+                    <span class="mini-tag">Algorithms</span>
+                    <span class="mini-tag">OOP</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education Item 2: Intermediate -->
+              <div class="timeline-item-wrapper">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                    <span class="badge-timeline">2016 – 2018</span>
+                    <span class="badge-grade">Score: 54.5%</span>
+                  </div>
+                  <h4 class="h5 fw-bold text-light mb-1">Intermediate (Science)</h4>
+                  <div class="text-info small fw-semibold mb-3">Ganesh Institute of Technology, BBSR</div>
+                  
+                  <p class="text-muted-custom small mb-0">
+                    Pre-university secondary education in Physics, Chemistry, and Mathematics (PCM). Built strong foundational analytical reasoning, mathematical logic, and scientific problem-solving.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Education Item 3: Matriculation -->
+              <div class="timeline-item-wrapper">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+                    <span class="badge-timeline">2015</span>
+                    <span class="badge-grade">Score: 74.5%</span>
+                  </div>
+                  <h4 class="h5 fw-bold text-light mb-1">Matriculation (10th Standard)</h4>
+                  <div class="text-info small fw-semibold mb-3">Laxmi Baraha High School Hatina</div>
+                  
+                  <p class="text-muted-custom small mb-0">
+                    Graduated with First Division (74.5%) in General Science and Mathematics. Awarded academic excellence recognition.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         F. CONTACT SECTION
+         ========================================================================== -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get in Touch with Jitendra</h2>
+          <p class="section-subtitle">
+            Have an open role, an interesting project, or want to discuss Python full-stack engineering and Machine Learning? Send a message below!
+          </p>
+        </div>
+
+        <div class="row g-5">
+          <!-- Left Column: Direct Contact Cards -->
+          <div class="col-lg-5 reveal-item">
+            <div class="mb-4">
+              <span class="section-tag">Contact Information</span>
+              <h3 class="h4 fw-bold mb-3 text-light">Direct Channels</h3>
+              <p class="text-muted-custom small">
+                Feel free to email, call, or reach out through LinkedIn. I am actively considering full-time software developer, backend engineer, and AI/Data Science roles.
+              </p>
+            </div>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              <!-- Email Card with Copy Button -->
+              <div class="contact-info-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="contact-icon-box bg-blue">
+                      <i class="bi bi-envelope-at-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <div class="small text-muted-custom">Email Address</div>
+                      <a href="mailto:jitendrax144@gmail.com" class="fw-bold text-light text-decoration-none contact-link">
+                        jitendrax144@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-copy-clip" data-copy="jitendrax144@gmail.com" title="Copy Email">
+                    <i class="bi bi-copy"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Phone Card with Copy Button -->
+              <div class="contact-info-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="contact-icon-box bg-emerald">
+                      <i class="bi bi-telephone-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <div class="small text-muted-custom">Phone / WhatsApp</div>
+                      <a href="tel:+919348896398" class="fw-bold text-light text-decoration-none contact-link">
+                        +91-9348896398
+                      </a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-copy-clip" data-copy="+919348896398" title="Copy Phone">
+                    <i class="bi bi-copy"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-info-card">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="contact-icon-box bg-purple">
+                    <i class="bi bi-geo-alt-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <div class="small text-muted-custom">Location &amp; Mobility</div>
+                    <div class="fw-bold text-light">
+                      Kendrapara, Odisha, India <span class="badge bg-success bg-opacity-25 text-success ms-1 small">Open to Remote &amp; Relocation</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LinkedIn & GitHub Cards -->
+              <div class="contact-info-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="contact-icon-box bg-blue">
+                      <i class="fa-brands fa-linkedin-in fs-4"></i>
+                    </div>
+                    <div>
+                      <div class="small text-muted-custom">LinkedIn Network</div>
+                      <a href="https://www.linkedin.com/in/jitendrax144/" target="_blank" rel="noopener noreferrer" class="fw-bold text-light text-decoration-none contact-link">
+                        linkedin.com/in/jitendrax144
+                      </a>
+                    </div>
+                  </div>
+                  <a href="https://www.linkedin.com/in/jitendrax144/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" style="width: 34px; height: 34px;" title="Visit LinkedIn">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Fast Response Commitment & Verification Button -->
+            <div class="p-4 rounded-4 response-commitment-card mb-3">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="status-indicator"></span>
+                <span class="fw-bold small text-light">Fast Response Guarantee</span>
+              </div>
+              <p class="small text-muted-custom mb-3">
+                All form submissions are validated securely and recorded directly into the persistent backend database. Messages are monitored daily.
+              </p>
+              
+              <!-- Verification Button (Allows user to inspect SQLite submissions!) -->
+              <button type="button" class="btn btn-sm btn-outline-custom w-100" id="viewSubmissionsBtn">
+                <i class="bi bi-database-check me-1 text-primary"></i> Inspect Database Submissions (Live SQLite)
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Animated Contact Form -->
+          <div class="col-lg-7 reveal-item">
+            <div class="glass-form-card p-4 p-md-5">
+              
+              <div class="form-card-header mb-4">
+                <h3 class="h4 fw-bold text-light mb-1">Send a Message</h3>
+                <p class="text-muted-custom small mb-0">Fill out the fields below to initiate contact via the Flask REST API.</p>
+              </div>
+
+              <!-- Animated Alert Response Containers -->
+              <div id="contactFormAlertSuccess" class="alert-animated alert-success-custom mb-4" style="display: none;" role="alert">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-check-circle-fill fs-3 text-success"></i>
+                  <div>
+                    <h5 class="fw-bold mb-1 text-light">Message Received Successfully!</h5>
+                    <p id="contactSuccessMsg" class="mb-2 text-muted-custom small"></p>
+                    <div class="badge bg-success bg-opacity-25 text-success font-monospace" id="submissionIdBadge">Ref: CNT-XXXXX</div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="contactFormAlertError" class="alert-animated alert-danger-custom mb-4" style="display: none;" role="alert">
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-exclamation-triangle-fill fs-3 text-danger"></i>
+                  <div>
+                    <h5 class="fw-bold mb-1 text-light">Submission Issue</h5>
+                    <p id="contactErrorMsg" class="mb-0 text-muted-custom small"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <form id="contactForm" novalidate>
+                <!-- Anti-Spam Honeypot Field (Invisible to human users) -->
+                <div class="d-none" aria-hidden="true">
+                  <label for="formWebsite">Leave this field blank</label>
+                  <input type="text" id="formWebsite" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="row g-3">
+                  <!-- Full Name Field -->
+                  <div class="col-md-6">
+                    <label for="formName" class="form-label-custom">
+                      Full Name <span class="text-danger">*</span>
+                    </label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-person-fill input-icon"></i>
+                      <input type="text" class="form-control form-control-custom" id="formName" name="name" placeholder="e.g. John Doe" required minlength="2" maxlength="100">
+                    </div>
+                    <div class="invalid-feedback-custom" id="nameError">Please enter your full name (at least 2 characters).</div>
+                  </div>
+
+                  <!-- Email Address Field -->
+                  <div class="col-md-6">
+                    <label for="formEmail" class="form-label-custom">
+                      Email Address <span class="text-danger">*</span>
+                    </label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-envelope-fill input-icon"></i>
+                      <input type="email" class="form-control form-control-custom" id="formEmail" name="email" placeholder="e.g. john@example.com" required maxlength="120">
+                    </div>
+                    <div class="invalid-feedback-custom" id="emailError">Please provide a valid email address.</div>
+                  </div>
+
+                  <!-- Phone Number Field (Optional) -->
+                  <div class="col-md-6">
+                    <label for="formPhone" class="form-label-custom">
+                      Phone Number <span class="text-muted-custom small">(Optional)</span>
+                    </label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-telephone-fill input-icon"></i>
+                      <input type="tel" class="form-control form-control-custom" id="formPhone" name="phone" placeholder="e.g. +91 9876543210" maxlength="30">
+                    </div>
+                  </div>
+
+                  <!-- Subject Field -->
+                  <div class="col-md-6">
+                    <label for="formSubject" class="form-label-custom">
+                      Subject <span class="text-danger">*</span>
+                    </label>
+                    <div class="input-icon-group">
+                      <i class="bi bi-chat-left-quote-fill input-icon"></i>
+                      <input type="text" class="form-control form-control-custom" id="formSubject" name="subject" placeholder="e.g. Job Opportunity / Collaboration" required minlength="3" maxlength="200">
+                    </div>
+                    <div class="invalid-feedback-custom" id="subjectError">Please provide a subject (at least 3 characters).</div>
+                  </div>
+
+                  <!-- Message Field with Character Counter -->
+                  <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <label for="formMessage" class="form-label-custom mb-0">
+                        Message <span class="text-danger">*</span>
+                      </label>
+                      <span class="char-counter small text-muted-custom" id="charCounter">0 / 4000</span>
+                    </div>
+                    <div class="input-icon-group">
+                      <i class="bi bi-pencil-square input-icon" style="top: 18px;"></i>
+                      <textarea class="form-control form-control-custom" id="formMessage" name="message" rows="5" placeholder="Share project details, job role requirements, or greetings..." required minlength="10" maxlength="4000"></textarea>
+                    </div>
+                    <div class="invalid-feedback-custom" id="messageError">Please enter a message of at least 10 characters.</div>
+                  </div>
+
+                  <!-- Submit Action Button -->
+                  <div class="col-12 mt-4">
+                    <button type="submit" id="submitContactBtn" class="btn-primary-custom w-100 py-3 justify-content-center">
+                      <span id="btnSubmitSpinner" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" style="display: none;"></span>
+                      <i class="bi bi-send-fill me-2" id="btnSubmitIcon"></i>
+                      <span id="btnSubmitText">Send Message via API</span>
+                    </button>
+                    <div class="text-center mt-2">
+                      <span class="text-muted-custom" style="font-size: 0.75rem;">
+                        <i class="bi bi-shield-lock me-1"></i> Data processed securely and saved to backend SQLite database.
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       G. FOOTER SECTION
+       ========================================================================== -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Col 1: Bio -->
+        <div class="col-lg-5 col-md-6">
+          <div class="navbar-brand-name mb-3">
+            <span class="brand-pulse"></span>
+            <span class="brand-text">JITENDRA <span class="text-gradient">JENA</span></span>
+          </div>
+          <p class="text-muted-custom mb-3 pe-lg-4">
+            Python Full Stack Developer &amp; AI / Data Science Specialist. Committed to engineering robust web architectures, scalable backend APIs, machine learning pipelines, and verified software quality.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://github.com/Jitendra14-4" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jitendrax144/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:jitendrax144@gmail.com" class="social-icon-btn" aria-label="Email Address">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="tel:+919348896398" class="social-icon-btn" aria-label="Phone Number">
+              <i class="bi bi-telephone-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3 text-uppercase footer-heading">Quick Links</h6>
+          <ul class="list-unstyled footer-nav-list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#skills" class="footer-link">Technical Skills</a></li>
+            <li><a href="#projects" class="footer-link">Featured Projects</a></li>
+            <li><a href="#experience" class="footer-link">Experience &amp; Education</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Direct Details & Resume -->
+        <div class="col-lg-4 col-md-12">
+          <h6 class="fw-bold mb-3 text-uppercase footer-heading">Get in Touch</h6>
+          <p class="text-muted-custom mb-2 small">
+            <i class="bi bi-envelope text-primary me-2"></i> jitendrax144@gmail.com
+          </p>
+          <p class="text-muted-custom mb-2 small">
+            <i class="bi bi-telephone text-success me-2"></i> +91-9348896398
+          </p>
+          <p class="text-muted-custom mb-3 small">
+            <i class="bi bi-geo-alt text-danger me-2"></i> Kendrapara, Odisha, India
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="{{ url_for('download_resume') }}" class="btn-outline-custom btn-sm">
+              <i class="bi bi-file-earmark-arrow-down-fill text-success me-1"></i> Download Resume (PDF)
+            </a>
+            <a href="#contact" class="btn-primary-custom btn-sm">
+              <i class="bi bi-send-fill me-1"></i> Send Message
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <!-- Bottom Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 gap-2">
+        <p class="text-muted-custom mb-0 small">
+          &copy; <span id="currentYear">2026</span> Jitendra Kumar Jena. All rights reserved.
+        </p>
+        <p class="text-muted-custom mb-0 small font-monospace">
+          Built with Python 3.14 &amp; Flask • Clean Architecture • SQLite Database
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to Top" title="Back to Top">
+    <i class="bi bi-arrow-up-short fs-2"></i>
+  </button>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+
+  <!-- 1. Project Detail Lightbox Modal -->
+  <div class="modal fade custom-modal" id="projectDetailsModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content glass-modal-content">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="badge text-uppercase bg-primary bg-opacity-25 text-primary mb-1" id="projectModalCategory">Full Stack</span>
+            <h4 class="modal-title fw-bold text-light" id="projectModalTitle">Project Title</h4>
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body p-4">
+          <div class="project-modal-image-wrapper mb-4">
+            <img id="projectModalImage" src="" alt="Project Artwork" class="img-fluid rounded-3">
+          </div>
+
+          <div class="mb-3">
+            <h5 class="h6 fw-bold text-light mb-2">Technology Stack</h5>
+            <div id="projectModalTech" class="d-flex flex-wrap gap-2"></div>
+          </div>
+
+          <div class="mb-0">
+            <h5 class="h6 fw-bold text-light mb-2">System Architecture &amp; Overview</h5>
+            <p id="projectModalDescription" class="text-muted-custom small mb-0"></p>
+          </div>
+        </div>
+
+        <div class="modal-footer border-0 pt-0 d-flex justify-content-between">
+          <button type="button" class="btn-outline-custom btn-sm" data-bs-dismiss="modal">Close</button>
+          <div class="d-flex gap-2">
+            <a id="projectModalGithub" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline-custom btn-sm">
+              <i class="fa-brands fa-github me-1"></i> Source Code
+            </a>
+            <a id="projectModalDemo" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary-custom btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. SQLite Database Submissions Inspector Modal (Step 8 Verification) -->
+  <div class="modal fade custom-modal" id="submissionsModal" tabindex="-1" aria-labelledby="submissionsModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content glass-modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-database-check text-success fs-4"></i>
+              <h4 class="modal-title fw-bold text-light" id="submissionsModalTitle">Live SQLite Database Submissions</h4>
+            </div>
+            <p class="text-muted-custom small mb-0">Records stored permanently in <code>database.db</code> (Table: <code>contacts</code>)</p>
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div id="submissionsLoading" class="text-center py-4">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p class="text-muted-custom small mt-2">Querying SQLite database via REST API...</p>
+          </div>
+
+          <div id="submissionsListContainer" style="display: none;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-muted-custom small">Total Persistent Entries: <strong class="text-light" id="submissionTotalCount">0</strong></span>
+              <button type="button" class="btn btn-sm btn-outline-custom" id="refreshSubmissionsBtn">
+                <i class="bi bi-arrow-clockwise me-1"></i> Refresh
+              </button>
+            </div>
+            
+            <div class="submissions-list d-flex flex-column gap-3" id="submissionsList"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer border-0">
+          <button type="button" class="btn-outline-custom btn-sm" data-bs-dismiss="modal">Close Inspector</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
